@@ -1,0 +1,33 @@
+/*
+TABLE OF CONTENTS
+    0. General Rules
+        - Text
+    1. Main page
+    2. How to Play page
+    3. Play page
+*/
+
+/* -------------------- 0. General Rules -------------------- */
+
+h1 {
+    font-family: sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* -------------------- 1. Main page -------------------- */
+.background-main {
+    background-image: url(../images/background-main.jpg);
+    min-height: 1080px;
+}
+
+.logo-main {
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+
