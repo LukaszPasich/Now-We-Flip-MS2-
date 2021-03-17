@@ -72,12 +72,12 @@ description
 
 ### Wireframes (low fidelity)
 description
-- [Wireframes for all pages AVAILABLE HERE](https://.../)
+- [Wireframes for the game AVAILABLE HERE](https://indd.adobe.com/view/41e1dcd7-ca60-4028-b5ac-60c370c98092)
 
 ### Prototype (high fidelity)
 decription
-- [Prototype - desktop version of the website AVAILABLE HERE](https://.../)
-- [Prototype - mobile version of the website AVAILABLE HERE](https://.../)
+- [Prototype - desktop version of the game AVAILABLE HERE](https://xd.adobe.com/view/302ca869-8919-4726-a9ca-0125f59e3156-657f/)
+- [Prototype - mobile version of the game AVAILABLE HERE](https://xd.adobe.com/view/41f2cbf8-b4f8-4b1c-8561-e580ba0675ed-14a1/)
 
 ### Design
 
@@ -272,8 +272,8 @@ The textual content was influenced by or taken from the websites:
 - [Website Name](https://www....)
 
 ### Media
-- Media - by Artist, downloaded from [www....](https://www...)
-
+- Rock, Paper, Scissors icons - by nightwolfdezines, downloaded from [www.vecteezy.com](https://www.vecteezy.com/vector-art/690865-rock-paper-scissors-line-icons)
+- Poker table felt background - by klikk, downloaded from [www.adobestock.com](https://stock.adobe.com/ie/images/poker-table-felt/1414609)
 
 ### Code
 - Code/feature description - code found on _www...._ website [https://www....](https://www....), (style.css file lines 000-000). 
