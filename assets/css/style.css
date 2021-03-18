@@ -1,33 +1,148 @@
 /*
 TABLE OF CONTENTS
-    0. General Rules
-        - Text
+    0. General Rules & Utility Classes
     1. Main page
     2. How to Play page
     3. Play page
+    4. Media querries
 */
 
 /* -------------------- 0. General Rules -------------------- */
 
+html {
+    font-family: Montserrat, sans-serif;
+}
+
 h1 {
-    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
     color: white;
     text-transform: uppercase;
     text-align: center;
+    line-height: 2.75rem;
+    letter-spacing: 1px;
+}
+
+.bgrd-green {
+    background-color: #249e76;
+}
+
+.bgrd-red {
+    background-color: #eb674d;
+}
+
+.margin-top-twentyfive {
+    margin-top: 25px;
+}
+
+.margin-top-fifty {
+    margin-top: 50px;
+}
+
+.margin-top-seventyfive {
+    margin-top: 75px;
+}
+
+.margin-top-hundred {
+    margin-top: 100px;
+}
+
+a {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.5);
+    color:white;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
 }
 
 /* -------------------- 1. Main page -------------------- */
-.background-main {
-    background-image: url(../images/background-main.jpg);
-    min-height: 1080px;
-}
 
 .logo-main {
     display: block;
     margin: auto;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
+.heading-main-small {
+    font-size: 1.625rem;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.background-main {
+    background-color: #186b50;
+    background-image: url(../images/background-main-halftone.png);
+    background-repeat: repeat;
+    background-position: center center;
+    min-height: 1080px;
+}
+
+.btn-main {
+    font-size: 1.5rem;
+    width: 260px;
+    transition: 0.3s;
+}
+
+a.btn-main:hover {
+    width: 270px;
+    padding: .5rem .4rem;
+    font-size: 1.625rem;
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
+}
+
+/* -------------------- 2. How to Play page -------------------- */
 
 
+
+/* -------------------- 3. Play page -------------------- */
+
+
+
+/* -------------------- 4. Media Querries -------------------- */
+
+@media screen and (max-width: 576px) {
+	.logo-main {
+    width: 360px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    }
+    h1 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    }
+    .heading-main-small {
+    font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+	.logo-main {
+    width: 260px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+
+    .btn-main {
+    font-size: 1.25rem;
+    width: 240px;
+    }
+
+    a.btn-main:hover {
+        width: 250px;
+        padding: .5rem .4rem;
+        font-size: 1.375rem;
+    }
+}
