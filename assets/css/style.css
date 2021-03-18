@@ -7,7 +7,7 @@ TABLE OF CONTENTS
     4. Media querries
 */
 
-/* -------------------- 0. General Rules -------------------- */
+/* -------------------- 0. General Rules & Utility Classes -------------------- */
 
 html {
     font-family: Montserrat, sans-serif;
@@ -58,13 +58,19 @@ a {
     padding: 0.5rem 0rem;
     text-align: center;
     text-decoration: none;
-    display: block;
     margin: auto;
 }
 
 a:hover {
     text-decoration: none;
     color: white;
+}
+
+nav {
+    width: 99%;
+    background-color: rgba(0,0,0,0.25);
+    margin: auto;
+    padding-top: 5px;
 }
 
 /* -------------------- 1. Main page -------------------- */
@@ -94,6 +100,7 @@ a:hover {
     font-size: 1.5rem;
     width: 260px;
     transition: 0.3s;
+    display: block;
 }
 
 a.btn-main:hover {
@@ -105,6 +112,20 @@ a.btn-main:hover {
 
 /* -------------------- 2. How to Play page -------------------- */
 
+.background-how {
+    background-color: #186b50;
+}
+
+.logo-how {
+    display: block;
+    margin: auto;
+    height: 130px;
+}
+
+.btn-how {
+    display: inline-block;
+    
+}
 
 
 /* -------------------- 3. Play page -------------------- */
