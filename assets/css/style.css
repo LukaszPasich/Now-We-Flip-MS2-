@@ -9,8 +9,11 @@ TABLE OF CONTENTS
 
 /* -------------------- 0. General Rules & Utility Classes -------------------- */
 
-h1, h2 {
+h1, h2, p, figcaption, a {
     font-family: Montserrat, sans-serif;
+}
+
+h1, h2 {
     font-weight: 700;
     font-size: 2.25rem;
     color: white;
@@ -61,8 +64,15 @@ h1, h2 {
     margin-bottom: 25px;
 }
 
+.padding-top-twentyfive {
+    padding-top: 25px;
+}
+
+.padding-top-fifty {
+    padding-top: 50px;
+}
+
 a {
-    font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-style: normal;
     text-transform: uppercase;
@@ -161,6 +171,12 @@ a.btn-how:hover {
 
 .heading-how {
     padding: 15px 0px;
+}
+
+.howtoplay-content {
+    padding-left: 75px;
+    padding-right: 75px;
+
 }
 
 /* -------------------- 3. Play page -------------------- */
