@@ -9,7 +9,7 @@ TABLE OF CONTENTS
 
 /* -------------------- 0. General Rules & Utility Classes -------------------- */
 
-h1 {
+h1, h2 {
     font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-size: 2.25rem;
@@ -18,6 +18,11 @@ h1 {
     text-align: center;
     line-height: 2.75rem;
     letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+.bgrd-beige {
+    background-color: #d5e1d7;
 }
 
 .bgrd-green {
@@ -26,6 +31,10 @@ h1 {
 
 .bgrd-lightgreen {
     background-color: #8ed1aa;
+}
+
+.bgrd-vdarkgreen {
+    background-color: #1c4437;
 }
 
 .bgrd-red {
@@ -138,8 +147,12 @@ a.btn-how:hover {
     width: 120px;
     box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
     color: #186b50;
+    background-color: #a4f2c5;
 }
 
+.heading-how {
+    padding: 15px 0px;
+}
 
 /* -------------------- 3. Play page -------------------- */
 
@@ -156,7 +169,7 @@ a.btn-how:hover {
     .logo-how {
     height: 100px;
     }
-    h1 {
+    h1, h2 {
     font-size: 1.5rem;
     line-height: 1.875rem;
     }
@@ -165,6 +178,9 @@ a.btn-how:hover {
     }
     .btn-how {
     margin-top: 30px;
+    }
+    .heading-how {
+    padding: 8px 0px;
     }
 }
 
