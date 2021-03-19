@@ -9,11 +9,8 @@ TABLE OF CONTENTS
 
 /* -------------------- 0. General Rules & Utility Classes -------------------- */
 
-html {
-    font-family: Montserrat, sans-serif;
-}
-
 h1 {
+    font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-size: 2.25rem;
     color: white;
@@ -25,6 +22,10 @@ h1 {
 
 .bgrd-green {
     background-color: #249e76;
+}
+
+.bgrd-lightgreen {
+    background-color: #8ed1aa;
 }
 
 .bgrd-red {
@@ -48,14 +49,13 @@ h1 {
 }
 
 a {
+    font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-style: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 7px;
     box-shadow: 4px 4px 6px rgba(0,0,0,0.5);
-    color:white;
-    padding: 0.5rem 0rem;
     text-align: center;
     text-decoration: none;
     margin: auto;
@@ -63,14 +63,6 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: white;
-}
-
-nav {
-    width: 99%;
-    background-color: rgba(0,0,0,0.25);
-    margin: auto;
-    padding-top: 5px;
 }
 
 /* -------------------- 1. Main page -------------------- */
@@ -99,12 +91,15 @@ nav {
 .btn-main {
     font-size: 1.5rem;
     width: 260px;
+    color:white;
     transition: 0.3s;
     display: block;
+    padding: .4rem .3rem;
 }
 
 a.btn-main:hover {
     width: 270px;
+    color:white;
     padding: .5rem .4rem;
     font-size: 1.625rem;
     box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
@@ -114,6 +109,13 @@ a.btn-main:hover {
 
 .background-how {
     background-color: #186b50;
+    min-height: 1080px;
+}
+
+.header-bar {
+    background-color: rgba(0,0,0,0.25);
+    width: 99%;
+    margin: auto;
 }
 
 .logo-how {
@@ -123,8 +125,19 @@ a.btn-main:hover {
 }
 
 .btn-how {
-    display: inline-block;
-    
+    font-size: 1.375rem;
+    width: 110px;
+    transition: 0.3s;
+    display: block;
+    margin-top: 45px;
+    color: #186b50;
+}
+
+a.btn-how:hover {
+    font-size: 1.5rem;
+    width: 120px;
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
+    color: #186b50;
 }
 
 
@@ -140,12 +153,18 @@ a.btn-main:hover {
     padding-top: 40px;
     padding-bottom: 30px;
     }
+    .logo-how {
+    height: 100px;
+    }
     h1 {
     font-size: 1.5rem;
     line-height: 1.875rem;
     }
     .heading-main-small {
     font-size: 1.125rem;
+    }
+    .btn-how {
+    margin-top: 30px;
     }
 }
 
@@ -155,7 +174,9 @@ a.btn-main:hover {
     padding-top: 20px;
     padding-bottom: 20px;
     }
-
+     .logo-how {
+    height: 65px;
+    }
     .btn-main {
     font-size: 1.25rem;
     width: 240px;
@@ -165,5 +186,19 @@ a.btn-main:hover {
         width: 250px;
         padding: .5rem .4rem;
         font-size: 1.375rem;
+    }
+    .btn-how {
+    font-size: 1rem;
+    width: 70px;
+    transition: 0.3s;
+    display: block;
+    margin-top: 20px;
+    color: #186b50;
+    }
+    a.btn-how:hover {
+    font-size: 1.125rem;
+    width: 75px;
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
+    color: #186b50;
     }
 }
