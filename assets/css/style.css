@@ -74,6 +74,11 @@ a:hover {
     text-decoration: none;
 }
 
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 /* -------------------- 1. Main page -------------------- */
 
 .logo-main {
