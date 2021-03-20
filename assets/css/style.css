@@ -277,7 +277,11 @@ a.btn-main:hover {
 
 /* -------------------- 3. Play page -------------------- */
 
-
+.background-play {
+    background-color: #186b50;
+    background-image: url("../images/background-game-table.jpg");
+    height: 100vh;
+}
 
 /* -------------------- 4. Media Querries -------------------- */
 
@@ -378,4 +382,15 @@ a.btn-main:hover {
         right: 10px;
         top: 19px;
     }
+}
+
+
+
+
+
+/* -------------------- DELETE THIS CLASS -------------------- */
+.wip {
+    background-color: rgba(255,255,255,0.25);
+    min-height: 500px;
+    margin: 5px;
 }
