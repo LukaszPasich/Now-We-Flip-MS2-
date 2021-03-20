@@ -9,7 +9,7 @@ TABLE OF CONTENTS
 
 /* -------------------- 0. General Rules & Utility Classes -------------------- */
 
-h1, h2, p, figcaption, a {
+h1, h2, p, figcaption, span, a {
     font-family: Montserrat, sans-serif;
 }
 
@@ -22,6 +22,17 @@ h1, h2 {
     line-height: 2.75rem;
     letter-spacing: 1px;
     margin-bottom: 0px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: .875rem;
+    text-align: center;
+    color: #1c4437;
+}
+
+.text-bold {
+    font-weight: 700;
 }
 
 .bgrd-beige {
@@ -176,7 +187,17 @@ a.btn-how:hover {
 .howtoplay-content {
     padding-left: 75px;
     padding-right: 75px;
+    line-height: 1.5rem;
+}
 
+.img-how-desktop {
+    display: block;
+    margin: auto;
+}
+
+.img-how-mobile {
+    display: none;
+    margin: auto;
 }
 
 /* -------------------- 3. Play page -------------------- */
@@ -185,7 +206,27 @@ a.btn-how:hover {
 
 /* -------------------- 4. Media Querries -------------------- */
 
+@media screen and (max-width: 1200px) {
+	.howtoplay-content {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.img-how-desktop {
+    display: none;
+    }
+    .img-how-mobile {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 576px) {
+    .howtoplay-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 	.logo-main {
     width: 360px;
     padding-top: 40px;
