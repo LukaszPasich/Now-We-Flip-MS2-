@@ -38,6 +38,14 @@ figcaption {
     font-weight: 700;
 }
 
+.color-vdarkgreen {
+    color: #186b50;
+}
+
+.color-white {
+    color: #fff;
+}
+
 .bgrd-beige {
     background-color: #d5e1d7;
 }
@@ -100,7 +108,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 7px;
-    box-shadow: 4px 4px 6px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
     text-align: center;
     text-decoration: none;
     margin: auto;
@@ -108,6 +116,44 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+.menu-absolute {
+    position: absolute;
+    top: 45px;
+    right: 150px;
+}
+
+.btn-header-menu {
+    font-size: 1.375rem;
+    padding: 4px 12px;
+    width: 100px;
+    transition: 0.3s;
+    color: #1c4437;
+    background-color: #d5e1d7;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+a.btn-header-menu:hover {
+    box-shadow: 10px 10px 11px rgba(0,0,0,0.4);
+    color: #1c4437;
+}
+
+.btn-header-play {
+    font-size: 1.375rem;
+    padding: 4px 12px;
+    width: 100px;
+    transition: 0.3s;
+    color: #fff;
+    background-color: #eb674d;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+a.btn-header-play:hover {
+    box-shadow: 10px 10px 11px rgba(0,0,0,0.4);
+    color: #fff;
 }
 
 .row {
@@ -173,30 +219,13 @@ a.btn-main:hover {
 
 .background-how {
     background-color: #186b50;
-    min-height: 1080px;
+    min-height: 980px;
 }
 
 .logo-how {
     display: block;
     height: 130px;
     margin: auto;
-}
-
-.btn-how {
-    font-size: 1.375rem;
-    width: 110px;
-    transition: 0.3s;
-    display: block;
-    margin-top: 45px;
-    color: #186b50;
-}
-
-a.btn-how:hover {
-    font-size: 1.5rem;
-    width: 120px;
-    box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
-    color: #186b50;
-    background-color: #a4f2c5;
 }
 
 .heading-how {
