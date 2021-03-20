@@ -9,7 +9,7 @@ TABLE OF CONTENTS
 
 /* -------------------- 0. General Rules & Utility Classes -------------------- */
 
-h1, h2, p, figcaption, span, a {
+h1, h2, p, figcaption, span, a, li {
     font-family: Montserrat, sans-serif;
 }
 
@@ -58,6 +58,10 @@ figcaption {
     background-color: #eb674d;
 }
 
+.bgrd-beigegray {
+    background-color: #676d5f;
+}
+
 .margin-top-twentyfive {
     margin-top: 25px;
 }
@@ -76,6 +80,10 @@ figcaption {
 
 .margin-bottom-twentyfive {
     margin-bottom: 25px;
+}
+
+.margin-bottom-fifty {
+    margin-bottom: 50px;
 }
 
 .padding-top-twentyfive {
@@ -110,6 +118,17 @@ a:hover {
 .drop-shadow {
     box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
 }
+
+.header-bar, .footer-bar {
+    background-color: rgba(0,0,0,0.25);
+    width: 99%;
+    margin: auto;
+}
+
+.footer-bar {
+    height: 65px;
+}
+
 /* -------------------- 1. Main page -------------------- */
 
 .logo-main {
@@ -155,12 +174,6 @@ a.btn-main:hover {
 .background-how {
     background-color: #186b50;
     min-height: 1080px;
-}
-
-.header-bar {
-    background-color: rgba(0,0,0,0.25);
-    width: 99%;
-    margin: auto;
 }
 
 .logo-how {
