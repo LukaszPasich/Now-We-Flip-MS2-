@@ -294,14 +294,14 @@ a.btn-main:hover {
 
 .player-panel-green {
     background-color:#249e76;
-    height: 30px;
+    height: 40px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
 .player-panel-red {
     background-color: #eb674d;
-    height: 30px;
+    height: 40px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -317,11 +317,25 @@ a.btn-main:hover {
     padding: 4px;
 }
 
-.player-name {
+.player-panel-name {
     margin: 30px;
-    padding: 10px 5px;
-    background-color: rgba(0,0,0,0.2);
+    padding: 8px 4px;
+    background-color: rgba(0,0,0,0.25);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: center;
+    border-radius: 5px;
+    border-bottom: 3px solid rgba(0,0,0,0.2);
+    border-right: 3px solid rgba(0,0,0,0.2);
+    line-height: 1.5rem;
 }
+
+.player-panel-cards {
+    margin: 0px 30px;
+}
+
 /* -------------------- 4. Media Querries -------------------- */
 
 @media screen and (max-width: 1200px) {
