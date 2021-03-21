@@ -205,6 +205,10 @@ a.btn-header-play:hover {
     height: 65px;
 }
 
+.display-inline-block {
+    display: inline-block;
+}
+
 /* -------------------- 1. Main page -------------------- */
 
 .logo-main {
@@ -333,7 +337,20 @@ a.btn-main:hover {
 }
 
 .player-panel-cards {
-    margin: 0px 30px;
+    margin: 10px 15px;
+}
+
+.player-panel-icon {
+    width: 55px;
+    text-align: center;
+}
+
+.player-panel-smcards {
+    width: 110px;
+}
+
+.player-panel-smcards img {
+    margin: 0px 1px;
 }
 
 /* -------------------- 4. Media Querries -------------------- */
