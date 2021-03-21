@@ -281,8 +281,47 @@ a.btn-main:hover {
     background-color: #186b50;
     background-image: url("../images/background-game-table.jpg");
     height: 100vh;
+    background-position: center center;
 }
 
+.player-panel-background {
+    background-color: rgba(255,255,255,0.15);
+    min-height: 500px;
+    box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.player-panel-green {
+    background-color:#249e76;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.player-panel-red {
+    background-color: #eb674d;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    margin: 8px 0px;
+    box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
+}
+
+.padding-four {
+    padding: 4px;
+}
+
+.player-name {
+    margin: 30px;
+    padding: 10px 5px;
+    background-color: rgba(0,0,0,0.2);
+}
 /* -------------------- 4. Media Querries -------------------- */
 
 @media screen and (max-width: 1200px) {
@@ -382,15 +421,4 @@ a.btn-main:hover {
         right: 10px;
         top: 19px;
     }
-}
-
-
-
-
-
-/* -------------------- DELETE THIS CLASS -------------------- */
-.wip {
-    background-color: rgba(255,255,255,0.25);
-    min-height: 500px;
-    margin: 5px;
 }
