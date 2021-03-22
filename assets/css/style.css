@@ -290,10 +290,12 @@ a.btn-main:hover {
 
 .player-panel-background {
     background-color: rgba(255,255,255,0.15);
-    min-height: 500px;
+    height: 450px;
     box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 .player-panel-green {
@@ -355,34 +357,95 @@ a.btn-main:hover {
 
 /* -------------------- 4. Media Querries -------------------- */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	.howtoplay-content {
         padding-left: 50px;
         padding-right: 50px;
     }
+
     .menu-absolute {
         right: 50px;
     }
+
     .btn-header-menu, .btn-header-play {
         font-size: 1rem;
         padding: 3px 9px;
         width: 70px;
         margin: 0px 3px;
-    }  
+    }
+
+    .player-panel-background {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+	.player-panel-background {
+        height: 105px;
+    }
+
+    .player-panel-green, .player-panel-red {
+        height: 15px;
+    }
+
+    .player-panel-name {
+    margin: 5px 10px;
+    padding: 4px 4px;
+    }
+
+    .player-panel-cards {
+        display: inline;
+        margin: 0px 0px;
+    }
+    
+    .player-panel-icon {
+    width: 50px;
+    }
+
+    div.player-panel-background img {
+        width: 25px;
+        height: auto;
+    }
+
+    .player-panel-smcards {
+    width: 90px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
 	.img-how-desktop {
         display: none;
     }
+
     .img-how-mobile {
         display: block;
     }
+
     .btn-header-menu-responsive, .btn-header-play-responsive {
         display: inline-block;
     }
+
     .btn-header-menu, .btn-header-play {
         display: none;
+    }
+
+    .player-panel-background {
+        height: 95px;
+    }
+
+    .player-panel-icon {
+    width: 30px;
+    }
+
+     div.player-panel-background img {
+        width: 20px;
+        height: auto;
+    }
+
+    .player-panel-smcards {
+    width: 75px;
     }
 }
 
@@ -391,29 +454,57 @@ a.btn-main:hover {
         padding-left: 25px;
         padding-right: 25px;
     }
+
 	.logo-main {
         width: 360px;
         padding-top: 40px;
         padding-bottom: 30px;
     }
+
     .logo-how {
         height: 100px;
     }
+
     h1, h2 {
         font-size: 1.5rem;
         line-height: 1.875rem;
     }
+
     .heading-main-small {
         font-size: 1.125rem;
     }
+
     .btn-how {
         margin-top: 30px;
     }
+
     .heading-how {
         padding: 8px 0px;
     }
+
     .menu-absolute {
         right: 30px;
+    }
+
+    .player-panel-background {
+        height: 90px;
+    }
+
+    .player-panel-icon {
+    width: 18px;
+    }
+
+     div.player-panel-background img {
+        width: 15px;
+        height: auto;
+    }
+
+    .player-panel-smcards {
+    width: 55px;
+    }
+
+    .player-panel-smcards img {
+    margin: 0px 0px;
     }
 }
 
@@ -423,9 +514,11 @@ a.btn-main:hover {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+
      .logo-how {
         height: 65px;
     }
+
     .btn-main {
         font-size: 1.25rem;
         width: 240px;
@@ -434,6 +527,7 @@ a.btn-main:hover {
     a.btn-main:hover {
         width: 245px;
     }
+
     .btn-how {
         font-size: 1rem;
         width: 70px;
@@ -442,14 +536,29 @@ a.btn-main:hover {
         margin-top: 20px;
         color: #186b50;
     }
+
     a.btn-how:hover {
         font-size: 1.125rem;
         width: 75px;
         box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
         color: #186b50;
     }
+
     .menu-absolute {
         right: 10px;
         top: 19px;
+    }
+
+    .player-panel-icon {
+    width: 13px;
+    }
+
+     div.player-panel-background img {
+        width: 11px;
+        height: auto;
+    }
+
+    .player-panel-smcards {
+    width: 42px;
     }
 }
