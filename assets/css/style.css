@@ -295,8 +295,7 @@ a.btn-main:hover {
 .player-panel-background {
     height: auto;
     margin: auto;
-    background-color: none;
-    padding: 1px 5px 15px;
+    padding: 10px;
     border-radius: 5px 5px 5px 5px;
 }
 
@@ -320,11 +319,11 @@ a.btn-main:hover {
 }
 
 .player-panel-cards {
-    margin: 5px 5px;
+    margin: 5px;
 }
 
 .player-panel-cards-top {
-    margin: 25px 5px 5px;
+    margin: 30px 5px 5px;
 }
 
 .padding-four {
@@ -356,11 +355,32 @@ a.btn-main:hover {
 }
 
 @media screen and (max-width: 768px) {
-     .player-panel-green, .player-panel-red {
-        height: 15px;
+    .player-panel-background {
+        height: auto;
+        padding: 0px;
+        text-align: center;
     }
 
-	.img-how-desktop {
+    .player-panel-icons {
+        font-size: .875rem;
+        width: 35px;
+        height: 35px;
+        padding:8px;
+    }
+
+    .player-panel-cards, .player-panel-cards-top {
+        display: inline-block;
+    }
+
+    .player-panel-cards {
+        margin: 0px -1px;
+    }
+
+     .player-panel-cards-top {
+         margin: 5px -2px 5px 10px;
+     }
+    
+    .img-how-desktop {
         display: none;
     }
 
@@ -454,5 +474,16 @@ a.btn-main:hover {
     .menu-absolute {
         right: 10px;
         top: 19px;
+    }
+
+    .player-panel-icons {
+        font-size: .75rem;
+        width: 29px;
+        height: 29px;
+        padding:7px;
+    }
+
+    .player-panel-cards {
+        margin: 0px -2px;
     }
 }
