@@ -38,10 +38,6 @@ figcaption {
     font-weight: 700;
 }
 
-.color-vdarkgreen {
-    color: #186b50;
-}
-
 .color-white {
     color: #fff;
 }
@@ -64,6 +60,10 @@ figcaption {
 
 .bgrd-red {
     background-color: #eb674d;
+}
+
+.bgrd-vdarkred {
+    background-color: #9e3824;
 }
 
 .bgrd-beigegray {
@@ -293,32 +293,11 @@ a.btn-main:hover {
 }
 
 .player-panel-background {
-    background-color: rgba(255,255,255,0.15);
-    height: 575px;
-    box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.player-panel-background {
-    background-color: rgba(255,255,255,0.15);
+    height: auto;
     margin: auto;
-}
-
-.player-panel-green {
-    background-color:#249e76;
-    height: 40px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.player-panel-red {
-    background-color: #eb674d;
-    height: 40px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    background-color: none;
+    padding: 1px 5px 15px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .card {
@@ -328,15 +307,10 @@ a.btn-main:hover {
     box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
 }
 
-.padding-four {
-    padding: 4px;
-}
-
 .player-panel-icons {
     display: block;
     margin: auto;
     font-size: 1.375rem;
-    background-color: #186b50;
     width: 45px;
     height: 45px;
     padding: 10px;
@@ -350,42 +324,12 @@ a.btn-main:hover {
 }
 
 .player-panel-cards-top {
-    margin: 20px 5px 5px;
+    margin: 25px 5px 5px;
 }
 
-/*
-.player-panel-name {
-    margin: 30px;
-    padding: 8px 4px;
-    background-color: rgba(0,0,0,0.25);
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.25rem;
-    text-align: center;
-    border-radius: 5px;
-    border-bottom: 3px solid rgba(0,0,0,0.2);
-    border-right: 3px solid rgba(0,0,0,0.2);
-    line-height: 1.5rem;
+.padding-four {
+    padding: 4px;
 }
-
-.player-panel-cards {
-    margin: 10px 15px;
-}
-
-.player-panel-icon {
-    width: 55px;
-    text-align: center;
-}
-
-.player-panel-smcards {
-    width: 110px;
-}
-
-.player-panel-smcards img {
-    margin: 0px 1px;
-}
-*/
 
 /* -------------------- 4. Media Querries -------------------- */
 
@@ -405,48 +349,17 @@ a.btn-main:hover {
         width: 70px;
         margin: 0px 3px;
     }
-
-    .player-panel-background {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
 }
 
 @media screen and (max-width: 991px) {
-	.player-panel-background {
-        height: 105px;
-    }
-
-    .player-panel-green, .player-panel-red {
-        height: 15px;
-    }
-
-    .player-panel-name {
-    margin: 5px 10px;
-    padding: 4px 4px;
-    }
-
-    .player-panel-cards {
-        display: inline;
-        margin: 0px 0px;
-    }
-    
-    .player-panel-icon {
-    width: 50px;
-    }
-
-    div.player-panel-background img {
-        width: 25px;
-        height: auto;
-    }
-
-    .player-panel-smcards {
-    width: 90px;
-    }
-
+   
 }
 
 @media screen and (max-width: 768px) {
+     .player-panel-green, .player-panel-red {
+        height: 15px;
+    }
+
 	.img-how-desktop {
         display: none;
     }
@@ -461,23 +374,6 @@ a.btn-main:hover {
 
     .btn-header-menu, .btn-header-play {
         display: none;
-    }
-
-    .player-panel-background {
-        height: 95px;
-    }
-
-    .player-panel-icon {
-    width: 30px;
-    }
-
-     div.player-panel-background img {
-        width: 20px;
-        height: auto;
-    }
-
-    .player-panel-smcards {
-    width: 75px;
     }
 }
 
@@ -516,27 +412,6 @@ a.btn-main:hover {
 
     .menu-absolute {
         right: 30px;
-    }
-
-    .player-panel-background {
-        height: 90px;
-    }
-
-    .player-panel-icon {
-    width: 18px;
-    }
-
-     div.player-panel-background img {
-        width: 15px;
-        height: auto;
-    }
-
-    .player-panel-smcards {
-    width: 55px;
-    }
-
-    .player-panel-smcards img {
-    margin: 0px 0px;
     }
 }
 
@@ -579,18 +454,5 @@ a.btn-main:hover {
     .menu-absolute {
         right: 10px;
         top: 19px;
-    }
-
-    .player-panel-icon {
-    width: 13px;
-    }
-
-     div.player-panel-background img {
-        width: 11px;
-        height: auto;
-    }
-
-    .player-panel-smcards {
-    width: 42px;
     }
 }
