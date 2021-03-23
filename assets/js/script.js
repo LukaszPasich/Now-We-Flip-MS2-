@@ -5,6 +5,15 @@ console.log("hello js");
 // 2. Shuffle Cards On-Load & On-Play Again //
 
 // 3. Plug Event Listeners //
+function cardSelected() {
+    console.log('card clicked');
+}
+
+let cards = document.getElementsByClassName("card");
+for (let i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('click', cardSelected);
+}
+
 
 // 4. Select 2 Cards //
 
