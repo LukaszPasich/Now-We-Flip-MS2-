@@ -487,3 +487,22 @@ a.btn-main:hover {
         margin: 0px -2px;
     }
 }
+
+
+
+
+/* ----------------------------------------------------- */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+}
+
+.js-card {
+    width: 23%;
+    height: auto;
+    margin: 3px;
+    box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
+}
