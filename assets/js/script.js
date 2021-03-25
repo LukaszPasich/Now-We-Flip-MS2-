@@ -90,9 +90,12 @@ const cardArray = [
     }
 ];
 
-const grid = document.querySelector('.grid');
+let grid = document.querySelector('.grid');
+let cardsSelected =[];
+let cardsSelectedId = [];
 
-    // display cards
+
+    // ----------------- Display Cards (shuffle, plug event listeners, display cards) -----------------
 
 function displayCards() {
     for (let i = 0; i < cardArray.length; i++) {
@@ -100,51 +103,29 @@ function displayCards() {
         card.setAttribute('src', 'assets/images/card-back.png');
         card.setAttribute('data-id', i);
         card.classList.add('js-card');
-        //card.addEventListener('click', flipCard);
+        card.addEventListener('click', selectCard);
         grid.appendChild(card);
     }
 }
 
+    // ----------------- Select Cards -----------------
+
+    function selectCard() {
+        var cardId = this.getAttribute('data-id');
+        cardsSelected.push(cardArray[cardId].name);
+        cardsSelectedId.push(cardId);
+        this.setAttribute('src', cardArray[cardId].img);
+        if (cardsChosen.length === 2) {
+            setTimeout(compareCards, 1000)
+        }
+}
+
+
 displayCards();
 
+
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
