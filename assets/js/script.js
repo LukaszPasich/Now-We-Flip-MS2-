@@ -122,13 +122,12 @@ const cardArray = [
 const grid = document.querySelector('.grid');
 // const cards = document.querySelectorAll("img");
 
-// console.log(cards);
-
+// record selected cards
 let cardsSelectedName =[];
 let cardsSelectedColour = [];
 let cardsSelectedId = [];
 
-
+// split recorded card values to individual card values
 let firstCardColour;
 let firstCardName;
 let firstCardId;
@@ -136,6 +135,14 @@ let firstCardId;
 let secondCardColour;
 let secondCardName;
 let secondCardId;
+
+// store lost cards for winning condition
+let lostGreenRock = 0;
+let lostRedRock = 0;
+let lostGreenPaper = 0;
+let lostRedPaper = 0;
+let lostGreenScissors = 0;
+let lostRedScissors = 0;
 
 
     // ----------------- Display Cards (plug event listeners, display cards) -----------------
@@ -210,9 +217,11 @@ function compareCards() {
             if (firstCardName === 'paper') {
                 cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
                 cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                storeLostRock(firstCardColour);
             } else {
                 cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener  
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                storeLostRock(secondCardColour); 
             }
 
     // comparing cards - rock beats scissors    
@@ -221,9 +230,11 @@ function compareCards() {
             if (firstCardName === 'rock') {
                 cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
                 cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                storeLostScissors(firstCardColour);
             } else {
                 cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener  
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                storeLostScissors(secondCardColour);
             }
     // comparing cards - scissors beat paper
     } else if (firstCardName === 'scissors' && secondCardName === 'paper' ||
@@ -231,9 +242,11 @@ function compareCards() {
         if (firstCardName === 'scissors') {
                 cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
                 cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                storeLostPaper(firstCardColour);
             } else {
                 cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener  
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                storeLostPaper(secondCardColour);
             }
     } else {
     // remove consolelog error when sure that all conditions work
@@ -246,6 +259,43 @@ function compareCards() {
 };
 
 
+// ----------------- Count Lost Cards -----------------
+
+function storeLostRock(rock) {
+    if (rock === 'green') {
+        lostRedRock++
+        console.log('red rock lost');
+    } else {
+        lostGreenRock++
+        console.log('green rock lost')
+    }
+    console.log('we have' + lostGreenRock + 'green rocks lost');
+    console.log('we have' + lostRedRock + 'red rocks lost');
+};
+
+function storeLostScissors(scissors) {
+    if (scissors === 'green') {
+        lostRedScissors++
+        console.log('red scissors lost');
+    } else {
+        lostGreenScissors++
+        console.log('green scissors lost')
+    }
+    console.log('we have' + lostGreenScissors + 'green scissors lost');
+    console.log('we have' + lostRedScissors + 'red scissors lost');
+};
+
+function storeLostPaper(paper) {
+    if (paper === 'green') {
+        lostRedPaper++
+        console.log('red paper lost');
+    } else {
+        lostGreenPaper++
+        console.log('green paper lost')
+    }
+    console.log('we have' + lostGreenPaper + 'green paper lost');
+    console.log('we have' + lostRedPaper + 'red paper lost');
+};
 
 
 
