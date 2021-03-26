@@ -176,7 +176,7 @@ function selectCard() {
 // ----------------- Compare Cards -----------------
 
 function compareCards() {
-    var cards = document.querySelectorAll("div.grid > img");
+    let cards = document.querySelectorAll("div.grid > img");
     console.log(cards);
 
     for (var i = 0; i < cardsSelectedName.length; i++) {
@@ -250,6 +250,7 @@ function compareCards() {
             }
     } else {
     // remove consolelog error when sure that all conditions work
+    // remove eventListeners from lost cards
     console.log('error');
     }
 
@@ -271,6 +272,7 @@ function storeLostRock(rock) {
     }
     console.log('we have' + lostGreenRock + 'green rocks lost');
     console.log('we have' + lostRedRock + 'red rocks lost');
+    displayLostCards();
 };
 
 function storeLostScissors(scissors) {
@@ -283,6 +285,7 @@ function storeLostScissors(scissors) {
     }
     console.log('we have' + lostGreenScissors + 'green scissors lost');
     console.log('we have' + lostRedScissors + 'red scissors lost');
+    displayLostCards();
 };
 
 function storeLostPaper(paper) {
@@ -295,6 +298,56 @@ function storeLostPaper(paper) {
     }
     console.log('we have' + lostGreenPaper + 'green paper lost');
     console.log('we have' + lostRedPaper + 'red paper lost');
+    displayLostCards();
+};
+
+
+// ----------------- Display Lost Cards -----------------
+
+function displayLostCards() {
+    let lostCards = document.querySelectorAll("div.player-panel-background > div");
+
+    for (let i = 0; i < lostCards.length; i++) {
+        if (lostGreenRock === 1) {
+            lostCards[0].classList.add('transparent');
+        } else if (lostGreenRock === 2) {
+            lostCards[1].classList.add('transparent');
+        } else if (lostGreenRock === 3) {
+            lostCards[2].classList.add('transparent');
+        } else if (lostGreenPaper === 1) {
+            lostCards[3].classList.add('transparent');
+        } else if (lostGreenPaper === 2) {
+            lostCards[4].classList.add('transparent');
+        } else if (lostGreenPaper === 3) {
+            lostCards[5].classList.add('transparent');
+        } else if (lostGreenScissors === 1) {
+            lostCards[6].classList.add('transparent');
+        } else if (lostGreenScissors === 2) {
+            lostCards[7].classList.add('transparent');
+        } else if (lostGreenScissors === 3) {
+            lostCards[8].classList.add('transparent');
+        } else if (lostRedRock === 1) {
+            lostCards[9].classList.add('transparent');
+        } else if (lostRedRock === 2) {
+            lostCards[10].classList.add('transparent');
+        } else if (lostRedRock === 3) {
+            lostCards[11].classList.add('transparent');
+        } else if (lostRedPaper === 1) {
+            lostCards[12].classList.add('transparent');
+        } else if (lostRedPaper === 2) {
+            lostCards[13].classList.add('transparent');
+        } else if (lostRedPaper === 3) {
+            lostCards[14].classList.add('transparent');
+        } else if (lostRedScissors === 1) {
+            lostCards[15].classList.add('transparent');
+        } else if (lostRedScissors === 2) {
+            lostCards[16].classList.add('transparent');
+        } else if (lostRedScissors === 3) {
+            lostCards[17].classList.add('transparent');
+        } else {
+        console.log(lostCards);
+        }
+    }
 };
 
 

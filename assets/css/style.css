@@ -506,3 +506,7 @@ a.btn-main:hover {
     margin: 3px;
     box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
 }
+
+.transparent {
+    opacity: 0.2;
+}
