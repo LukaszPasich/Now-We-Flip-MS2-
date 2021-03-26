@@ -120,17 +120,22 @@ const cardArray = [
     // ----------------- Variables -----------------
 
 const grid = document.querySelector('.grid');
+// const cards = document.querySelectorAll("img");
+
+// console.log(cards);
 
 let cardsSelectedName =[];
 let cardsSelectedColour = [];
 let cardsSelectedId = [];
 
 
-let firstCardColour = [];
-let firstCardName = [];
+let firstCardColour;
+let firstCardName;
+let firstCardId;
 
-let secondCardColour = [];
-let secondCardName = [];
+let secondCardColour;
+let secondCardName;
+let secondCardId;
 
 
     // ----------------- Display Cards (plug event listeners, display cards) -----------------
@@ -155,7 +160,7 @@ function selectCard() {
     cardsSelectedId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
         if (cardsSelectedName.length === 2) {
-        setTimeout(compareCards, 1000);
+        setTimeout(compareCards, 1500);
 
         // need to add removeEventListener here
     }
@@ -164,45 +169,71 @@ function selectCard() {
 // ----------------- Compare Cards -----------------
 
 function compareCards() {
-    console.log(cardsSelectedName);
-    console.log(cardsSelectedColour);
-    console.log(cardsSelectedId);
+    var cards = document.querySelectorAll("div.grid > img");
+    console.log(cards);
 
+    for (var i = 0; i < cardsSelectedName.length; i++) {
+        firstCardName = cardsSelectedName[0];
+        secondCardName = cardsSelectedName[1];
+    }
+
+    for (var i = 0; i < cardsSelectedColour.length; i++) {
+        firstCardColour = cardsSelectedColour[0];
+        secondCardColour = cardsSelectedColour[1];
+    }
+
+    for (var i = 0; i < cardsSelectedId.length; i++) {
+        firstCardId = cardsSelectedId[0];
+        secondCardId = cardsSelectedId[1];
+    }
+
+    /*
     firstCardColour.push(cardsSelectedColour[0]);
     firstCardName.push(cardsSelectedName[0]);
+    firstCardId.push(cardsSelectedId[0]);
 
     secondCardColour.push(cardsSelectedColour[1]);
     secondCardName.push(cardsSelectedName[1]);
+    secondCardId.push(cardsSelectedId[1]);
+    */
 
     console.log(firstCardColour);
     console.log(firstCardName);
+    console.log(firstCardId);
     console.log(secondCardColour);
     console.log(secondCardName);
+    console.log(secondCardId);
+
+
 
     // comparing cards draw condition
     if (firstCardColour[0] === secondCardColour[0] ||
         firstCardName[0] === secondCardName[0] ||
         firstCardName[0] === 'x' ||
         secondCardName[0] === 'x') {
-            console.log('draw');
+            cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
+            cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
+            console.log('a');
         } else if (firstCardName[0] === 'rock' && secondCardName[0] === 'paper' ||
             firstCardName[0] === 'paper' && secondCardName[0] === 'rock') {
-            console.log('paper beats rock');
+            outcomeRockPaper();
         } else if (firstCardName[0] === 'rock' && secondCardName[0] === 'scissors' ||
             firstCardName[0] === 'scissors' && secondCardName[0] === 'rock') {
-            console.log('rock beats scissors');
+            outcomeRockScissors();
         } else if (firstCardName[0] === 'scissors' && secondCardName[0] === 'paper' ||
             firstCardName[0] === 'paper' && secondCardName[0] === 'scissors') {
-            console.log('scissors beat paper');
+            outcomePaperScissors();
         } else {
+        // remove consolelog error when sure that all conditions work
         console.log('error');
         }
 
     firstCardColour = [];
     firstCardName = [];
-
+    firstCardId = [];
     secondCardColour = [];
     secondCardName = [];
+    secondCardId = [];
     
     cardsSelectedName =[];
     cardsSelectedColour = [];
@@ -215,15 +246,27 @@ function compareCards() {
 
 /*
 function outcomeDraw() {
-    console.log('draw');
+    cardArray[cardsSelectedId[0]].setAttribute('src', 'assets/images/card-back.png');
+    cardArray[cardsSelectedId[1]].setAttribute('src', 'assets/images/card-back.png');
 }
 */
+// ----------------- Outcome Paper Rock -----------------
 
+function outcomeRockPaper() {
+    console.log('paper beats rock');
+}
 
+// ----------------- Outcome Rock Scissors -----------------
 
+function outcomeRockScissors() {
+    console.log('rock beats scissors');
+}
 
+// ----------------- Outcome Paper Scissors -----------------
 
-
+function outcomePaperScissors() {
+    console.log('scissors beats paper');
+}
 
 
 
