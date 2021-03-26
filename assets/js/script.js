@@ -218,10 +218,23 @@ function compareCards() {
     // comparing cards - rock beats scissors    
     } else if (firstCardName === 'rock' && secondCardName === 'scissors' ||
         firstCardName === 'scissors' && secondCardName === 'rock') {
-        outcomeRockScissors();
+            if (firstCardName === 'rock') {
+                cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
+                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+            } else {
+                cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener  
+            }
+    // comparing cards - scissors beat paper
     } else if (firstCardName === 'scissors' && secondCardName === 'paper' ||
         firstCardName === 'paper' && secondCardName === 'scissors') {
-        outcomePaperScissors();
+        if (firstCardName === 'scissors') {
+                cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
+                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+            } else {
+                cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener  
+            }
     } else {
     // remove consolelog error when sure that all conditions work
     console.log('error');
