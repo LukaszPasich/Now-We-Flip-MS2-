@@ -160,7 +160,7 @@ function selectCard() {
     cardsSelectedId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
         if (cardsSelectedName.length === 2) {
-        setTimeout(compareCards, 1500);
+        setTimeout(compareCards, 2000);
 
         // need to add removeEventListener here
     }
@@ -187,16 +187,6 @@ function compareCards() {
         secondCardId = cardsSelectedId[1];
     }
 
-    /*
-    firstCardColour.push(cardsSelectedColour[0]);
-    firstCardName.push(cardsSelectedName[0]);
-    firstCardId.push(cardsSelectedId[0]);
-
-    secondCardColour.push(cardsSelectedColour[1]);
-    secondCardName.push(cardsSelectedName[1]);
-    secondCardId.push(cardsSelectedId[1]);
-    */
-
     console.log(firstCardColour);
     console.log(firstCardName);
     console.log(firstCardId);
@@ -206,67 +196,41 @@ function compareCards() {
 
 
 
-    // comparing cards draw condition
+    // comparing cards - draw
     if (firstCardColour[0] === secondCardColour[0] ||
         firstCardName[0] === secondCardName[0] ||
         firstCardName[0] === 'x' ||
         secondCardName[0] === 'x') {
             cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
             cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
-            console.log('a');
-        } else if (firstCardName[0] === 'rock' && secondCardName[0] === 'paper' ||
-            firstCardName[0] === 'paper' && secondCardName[0] === 'rock') {
-            outcomeRockPaper();
-        } else if (firstCardName[0] === 'rock' && secondCardName[0] === 'scissors' ||
-            firstCardName[0] === 'scissors' && secondCardName[0] === 'rock') {
-            outcomeRockScissors();
-        } else if (firstCardName[0] === 'scissors' && secondCardName[0] === 'paper' ||
-            firstCardName[0] === 'paper' && secondCardName[0] === 'scissors') {
-            outcomePaperScissors();
-        } else {
-        // remove consolelog error when sure that all conditions work
-        console.log('error');
-        }
 
-    firstCardColour = [];
-    firstCardName = [];
-    firstCardId = [];
-    secondCardColour = [];
-    secondCardName = [];
-    secondCardId = [];
-    
+    // comparing cards - paper beats rock
+    } else if (firstCardName === 'rock' && secondCardName === 'paper' ||
+        firstCardName === 'paper' && secondCardName === 'rock') {
+            if (firstCardName === 'paper') {
+                cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
+                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+            } else {
+                cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener  
+            }
+
+    // comparing cards - rock beats scissors    
+    } else if (firstCardName === 'rock' && secondCardName === 'scissors' ||
+        firstCardName === 'scissors' && secondCardName === 'rock') {
+        outcomeRockScissors();
+    } else if (firstCardName === 'scissors' && secondCardName === 'paper' ||
+        firstCardName === 'paper' && secondCardName === 'scissors') {
+        outcomePaperScissors();
+    } else {
+    // remove consolelog error when sure that all conditions work
+    console.log('error');
+    }
+
     cardsSelectedName =[];
     cardsSelectedColour = [];
     cardsSelectedId = [];
 };
-
-
-
-// ----------------- Outcome Draw -----------------
-
-/*
-function outcomeDraw() {
-    cardArray[cardsSelectedId[0]].setAttribute('src', 'assets/images/card-back.png');
-    cardArray[cardsSelectedId[1]].setAttribute('src', 'assets/images/card-back.png');
-}
-*/
-// ----------------- Outcome Paper Rock -----------------
-
-function outcomeRockPaper() {
-    console.log('paper beats rock');
-}
-
-// ----------------- Outcome Rock Scissors -----------------
-
-function outcomeRockScissors() {
-    console.log('rock beats scissors');
-}
-
-// ----------------- Outcome Paper Scissors -----------------
-
-function outcomePaperScissors() {
-    console.log('scissors beats paper');
-}
 
 
 
@@ -276,7 +240,6 @@ function outcomePaperScissors() {
 displayCards();
 
 console.log(cardArray);
-
 
 
 });
