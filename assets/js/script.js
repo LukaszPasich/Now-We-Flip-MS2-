@@ -274,6 +274,7 @@ function storeLostRock(rock) {
         console.log(lostGreenRock);
         lostCards[lostGreenRock - 1].classList.add('transparent');
     }
+    checkForWin();
 };
 
 function storeLostScissors(scissors) {
@@ -287,6 +288,7 @@ function storeLostScissors(scissors) {
         console.log(lostGreenScissors);
         lostCards[5 + lostGreenScissors].classList.add('transparent');
     }
+    checkForWin();
 };
 
 function storeLostPaper(paper) {
@@ -299,7 +301,24 @@ function storeLostPaper(paper) {
         console.log(lostGreenPaper);
         lostCards[2 + lostGreenPaper].classList.add('transparent');
     }
+    checkForWin();
 };
+
+// ----------------- Check for Winning Condition -----------------
+
+function checkForWin() {
+    if (lostRedRock + lostRedPaper === 6 ||
+        lostRedRock + lostRedScissors === 6 ||
+        lostRedPaper + lostRedScissors === 6) {
+            console.log('You won');
+    } else if
+        (lostGreenRock + lostGreenPaper === 6 ||
+        lostGreenRock + lostGreenScissors === 6 ||
+        lostGreenPaper + lostGreenScissors === 6) {
+        console.log('You lost');
+        }
+};
+
 
 /*
 function displayLostRock() {
