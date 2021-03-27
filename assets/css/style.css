@@ -510,3 +510,8 @@ a.btn-main:hover {
 .transparent {
     opacity: 0.2;
 }
+
+#result {
+    color: #fff;
+    font-size: 1.5rem;
+}

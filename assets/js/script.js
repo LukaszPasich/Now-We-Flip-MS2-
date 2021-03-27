@@ -119,8 +119,9 @@ const cardArray = [
 
     // ----------------- Variables -----------------
 
-const grid = document.querySelector('.grid');
-const lostCards = document.querySelectorAll("div.player-panel-background > div");
+let grid = document.querySelector('.grid');
+let result = document.getElementById('result');
+let lostCards = document.querySelectorAll("div.player-panel-background > div");
 
 console.log(lostCards);
 
@@ -146,6 +147,11 @@ let lostRedPaper = 0;
 let lostGreenScissors = 0;
 let lostRedScissors = 0;
 
+// store points
+let points = 0;
+let pointsDisplayed = points.toString();
+result.textContent = pointsDisplayed;
+
 
     // ----------------- Display Cards (plug event listeners, display cards) -----------------
 
@@ -160,6 +166,15 @@ function displayCards() {
     }
 };
 
+
+    // ----------------- Display Points -----------------
+
+function displayPoints() {
+    pointsDisplayed = points.toString();
+    result.textContent = pointsDisplayed;
+};
+
+
     // ----------------- Select Cards -----------------
 
 function selectCard() {
@@ -169,7 +184,7 @@ function selectCard() {
     cardsSelectedId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
         if (cardsSelectedName.length === 2) {
-        setTimeout(compareCards, 2000);
+        setTimeout(compareCards, 1750);
 
         // need to add removeEventListener here
     }
@@ -203,8 +218,6 @@ function compareCards() {
     console.log(secondCardName);
     console.log(secondCardId);
 
-
-
     // comparing cards - draw
     if (firstCardColour[0] === secondCardColour[0] ||
         firstCardName[0] === secondCardName[0] ||
@@ -212,6 +225,8 @@ function compareCards() {
         secondCardName[0] === 'x') {
             cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
             cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
+            points--
+            displayPoints();
 
     // comparing cards - paper beats rock
     } else if (firstCardName === 'rock' && secondCardName === 'paper' ||
@@ -266,40 +281,52 @@ function compareCards() {
 
 function storeLostRock(rock) {
     if (rock === 'green') {
-        lostRedRock++
+        lostRedRock++  // add lost card
         console.log(lostRedRock);
         lostCards[8 + lostRedRock].classList.add('transparent');
+        points += 3
+        displayPoints();
     } else {
-        lostGreenRock++
+        lostGreenRock++  // add lost card
         console.log(lostGreenRock);
         lostCards[lostGreenRock - 1].classList.add('transparent');
+        points -= 2
+        displayPoints();
     }
     checkForWin();
 };
 
 function storeLostScissors(scissors) {
     if (scissors === 'green') {
-        lostRedScissors++
+        lostRedScissors++  // add lost card
         console.log(lostRedScissors);
         lostCards[14 + lostRedScissors].classList.add('transparent');
+        points += 3
+        displayPoints();
 
     } else {
-        lostGreenScissors++
+        lostGreenScissors++  // add lost card
         console.log(lostGreenScissors);
         lostCards[5 + lostGreenScissors].classList.add('transparent');
+        points -= 2
+        displayPoints();
     }
     checkForWin();
 };
 
 function storeLostPaper(paper) {
     if (paper === 'green') {
-        lostRedPaper++
+        lostRedPaper++  // add lost card
         console.log(lostRedPaper);
         lostCards[11 + lostRedPaper].classList.add('transparent');
+        points += 3
+        displayPoints();
     } else {
-        lostGreenPaper++
+        lostGreenPaper++   // add lost card
         console.log(lostGreenPaper);
         lostCards[2 + lostGreenPaper].classList.add('transparent');
+        points -= 2
+        displayPoints();
     }
     checkForWin();
 };
@@ -320,96 +347,7 @@ function checkForWin() {
 };
 
 
-/*
-function displayLostRock() {
-    if (lostGreenRock === 1) {
-        lostCards[0].classList.add('transparent');
-    } else if (lostGreenRock === 2) {
-        lostCards[1].classList.add('transparent');
-    } else if (lostGreenRock === 3) {
-        lostCards[2].classList.add('transparent');
-    } else if (lostRedRock === 1) {
-        lostCards[9].classList.add('transparent');
-    } else if (lostRedRock === 2) {
-        lostCards[10].classList.add('transparent');
-    } else if (lostRedRock === 3) {
-        lostCards[11].classList.add('transparent');
-    }
-};
-
-function displayLostScissors() {
-    if (lostGreenScissors === 1) {
-        lostCards[6].classList.add('transparent');
-    } else if (lostGreenScissors === 2) {
-        lostCards[7].classList.add('transparent');
-    } else if (lostGreenScissors === 3) {
-        lostCards[8].classList.add('transparent');
-    } else if (lostRedRock === 1) {
-        lostCards[9].classList.add('transparent');
-    } else if (lostRedRock === 2) {
-        lostCards[10].classList.add('transparent');
-    } else if (lostRedRock === 3) {
-        lostCards[11].classList.add('transparent');
-    }
-};
-
-
-
-/* ----------------- Display Lost Cards -----------------
-
-function displayLostCards() {
-    let lostCards = document.querySelectorAll("div.player-panel-background > div");
-
-    for (let i = 0; i < lostCards.length; i++) {
-        if (lostGreenRock === 1) {
-            lostCards[0].classList.add('transparent');
-        } else if (lostGreenRock === 2) {
-            lostCards[1].classList.add('transparent');
-        } else if (lostGreenRock === 3) {
-            lostCards[2].classList.add('transparent');
-        } else if (lostGreenPaper === 1) {
-            lostCards[3].classList.add('transparent');
-        } else if (lostGreenPaper === 2) {
-            lostCards[4].classList.add('transparent');
-        } else if (lostGreenPaper === 3) {
-            lostCards[5].classList.add('transparent');
-        } else if (lostGreenScissors === 1) {
-            lostCards[6].classList.add('transparent');
-        } else if (lostGreenScissors === 2) {
-            lostCards[7].classList.add('transparent');
-        } else if (lostGreenScissors === 3) {
-            lostCards[8].classList.add('transparent');
-        } else if (lostRedRock === 1) {
-            lostCards[9].classList.add('transparent');
-        } else if (lostRedRock === 2) {
-            lostCards[10].classList.add('transparent');
-        } else if (lostRedRock === 3) {
-            lostCards[11].classList.add('transparent');
-        } else if (lostRedPaper === 1) {
-            lostCards[12].classList.add('transparent');
-        } else if (lostRedPaper === 2) {
-            lostCards[13].classList.add('transparent');
-        } else if (lostRedPaper === 3) {
-            lostCards[14].classList.add('transparent');
-        } else if (lostRedScissors === 1) {
-            lostCards[15].classList.add('transparent');
-        } else if (lostRedScissors === 2) {
-            lostCards[16].classList.add('transparent');
-        } else if (lostRedScissors === 3) {
-            lostCards[17].classList.add('transparent');
-        } else {
-        console.log(lostCards);
-        }
-    }
-};
-*/
-
-
-
 displayCards();
-
-console.log(cardArray);
-
 
 });
 
