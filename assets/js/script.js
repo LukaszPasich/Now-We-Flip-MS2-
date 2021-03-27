@@ -120,7 +120,9 @@ const cardArray = [
     // ----------------- Variables -----------------
 
 const grid = document.querySelector('.grid');
-// const cards = document.querySelectorAll("img");
+const lostCards = document.querySelectorAll("div.player-panel-background > div");
+
+console.log(lostCards);
 
 // record selected cards
 let cardsSelectedName =[];
@@ -260,49 +262,81 @@ function compareCards() {
 };
 
 
-// ----------------- Count Lost Cards -----------------
+// ----------------- Count & Display Lost Cards -----------------
 
 function storeLostRock(rock) {
     if (rock === 'green') {
         lostRedRock++
-        console.log('red rock lost');
+        console.log(lostRedRock);
+        lostCards[8 + lostRedRock].classList.add('transparent');
     } else {
         lostGreenRock++
-        console.log('green rock lost')
+        console.log(lostGreenRock);
+        lostCards[lostGreenRock - 1].classList.add('transparent');
     }
-    console.log('we have' + lostGreenRock + 'green rocks lost');
-    console.log('we have' + lostRedRock + 'red rocks lost');
-    displayLostCards();
 };
 
 function storeLostScissors(scissors) {
     if (scissors === 'green') {
         lostRedScissors++
-        console.log('red scissors lost');
+        console.log(lostRedScissors);
+        lostCards[14 + lostRedScissors].classList.add('transparent');
+
     } else {
         lostGreenScissors++
-        console.log('green scissors lost')
+        console.log(lostGreenScissors);
+        lostCards[5 + lostGreenScissors].classList.add('transparent');
     }
-    console.log('we have' + lostGreenScissors + 'green scissors lost');
-    console.log('we have' + lostRedScissors + 'red scissors lost');
-    displayLostCards();
 };
 
 function storeLostPaper(paper) {
     if (paper === 'green') {
         lostRedPaper++
-        console.log('red paper lost');
+        console.log(lostRedPaper);
+        lostCards[11 + lostRedPaper].classList.add('transparent');
     } else {
         lostGreenPaper++
-        console.log('green paper lost')
+        console.log(lostGreenPaper);
+        lostCards[2 + lostGreenPaper].classList.add('transparent');
     }
-    console.log('we have' + lostGreenPaper + 'green paper lost');
-    console.log('we have' + lostRedPaper + 'red paper lost');
-    displayLostCards();
+};
+
+/*
+function displayLostRock() {
+    if (lostGreenRock === 1) {
+        lostCards[0].classList.add('transparent');
+    } else if (lostGreenRock === 2) {
+        lostCards[1].classList.add('transparent');
+    } else if (lostGreenRock === 3) {
+        lostCards[2].classList.add('transparent');
+    } else if (lostRedRock === 1) {
+        lostCards[9].classList.add('transparent');
+    } else if (lostRedRock === 2) {
+        lostCards[10].classList.add('transparent');
+    } else if (lostRedRock === 3) {
+        lostCards[11].classList.add('transparent');
+    }
+};
+
+function displayLostScissors() {
+    if (lostGreenScissors === 1) {
+        lostCards[6].classList.add('transparent');
+    } else if (lostGreenScissors === 2) {
+        lostCards[7].classList.add('transparent');
+    } else if (lostGreenScissors === 3) {
+        lostCards[8].classList.add('transparent');
+    } else if (lostRedRock === 1) {
+        lostCards[9].classList.add('transparent');
+    } else if (lostRedRock === 2) {
+        lostCards[10].classList.add('transparent');
+    } else if (lostRedRock === 3) {
+        lostCards[11].classList.add('transparent');
+    }
 };
 
 
-// ----------------- Display Lost Cards -----------------
+
+/* ----------------- Display Lost Cards -----------------
 
 function displayLostCards() {
     let lostCards = document.querySelectorAll("div.player-panel-background > div");
@@ -349,7 +383,7 @@ function displayLostCards() {
         }
     }
 };
-
+*/
 
 
 
