@@ -71,6 +71,10 @@ figcaption {
     background-color: #676d5f;
 }
 
+.margin-top-ten {
+    margin-top: 10px;
+}
+
 .margin-top-twentyfive {
     margin-top: 25px;
 }
@@ -85,6 +89,10 @@ figcaption {
 
 .margin-top-hundred {
     margin-top: 100px;
+}
+
+.margin-bottom-ten {
+    margin-bottom: 10px;
 }
 
 .margin-bottom-twentyfive {
@@ -334,6 +342,7 @@ a.btn-main:hover {
 
 /* -------------------- 4. Elements activated or updated by JavaScript -------------------- */
 
+/* Cards */
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -353,7 +362,6 @@ a.btn-main:hover {
 }
 
 /* Score */
-
 .score {
     position: absolute;
     top: 15px;
@@ -383,9 +391,8 @@ a.btn-main:hover {
     line-height: 2.75rem;
 }
 
-/* Win message */
-
-#win-message {
+/* Win/Lose message */
+#win-message, #lose-message {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -398,7 +405,7 @@ a.btn-main:hover {
     align-items: center;
 }
 
-#win {
+#win, #lose {
     text-align: center;
     color: white;
     font-size: 2rem;
@@ -406,7 +413,7 @@ a.btn-main:hover {
     text-transform: uppercase;
 }
 
-#win span{
+#win span, #lose span {
     font-size: 1.125rem;
     font-weight: 300;
     letter-spacing: 1px;
