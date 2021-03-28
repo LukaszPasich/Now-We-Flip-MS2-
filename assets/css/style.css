@@ -4,7 +4,8 @@ TABLE OF CONTENTS
     1. Main page
     2. How to Play page
     3. Play page
-    4. Media querries
+    4. Elements activated or updated by JavaScript
+    5. Media querries
 */
 
 /* -------------------- 0. General Rules & Utility Classes -------------------- */
@@ -330,7 +331,88 @@ a.btn-main:hover {
     padding: 4px;
 }
 
-/* -------------------- 4. Media Querries -------------------- */
+
+/* -------------------- 4. Elements activated or updated by JavaScript -------------------- */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+}
+
+.js-card {
+    width: 23%;
+    height: auto;
+    margin: 3px;
+    box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
+}
+
+.transparent {
+    opacity: 0.2;
+}
+
+/* Score */
+
+.score {
+    position: absolute;
+    top: 15px;
+    left: 250px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    width: 6rem;
+    height: 6rem;
+}
+
+.points {
+    margin: 0px;
+    font-size: .75rem;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+#result {
+    font-size: 2.5rem;
+    padding: 0px;
+    margin: 0px;
+    line-height: 2.75rem;
+}
+
+/* Win message */
+
+#win-message {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#win {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#win span{
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* -------------------- 5. Media Querries -------------------- */
 
 @media screen and (max-width: 1199px) {
 	.howtoplay-content {
@@ -348,13 +430,22 @@ a.btn-main:hover {
         width: 70px;
         margin: 0px 3px;
     }
+
+    .score {
+        left: 150px;
+    }
+
 }
 
 @media screen and (max-width: 991px) {
    
+    .score {
+        left: 50px;
+    }
+
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .player-panel-background {
         height: auto;
         padding: 0px;
@@ -486,87 +577,8 @@ a.btn-main:hover {
     .player-panel-cards {
         margin: 0px -2px;
     }
-}
 
-
-
-
-/* ----------------------------------------------------- */
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    width: 100%;
-}
-
-.js-card {
-    width: 23%;
-    height: auto;
-    margin: 3px;
-    box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
-}
-
-.transparent {
-    opacity: 0.2;
-}
-
-/* Score */
-
-.score {
-    position: absolute;
-    top: 15px;
-    left: 250px;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 50%;
-    margin: 0px;
-    padding: 0px;
-    color: #fff;
-    font-weight: 600;
-    text-align: center;
-    width: 6rem;
-    height: 6rem;
-}
-
-.points {
-    margin: 0px;
-    font-size: .75rem;
-    font-weight: 100;
-    margin-top: 20px;
-}
-
-#result {
-    font-size: 2.5rem;
-    padding: 0px;
-    margin: 0px;
-    line-height: 2.75rem;
-}
-
-/* Win message */
-
-#win-message {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.75);
-    visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#win {
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-#win span{
-    font-size: 1.125rem;
-    font-weight: 300;
-    letter-spacing: 1px;
+    .js-card {
+        margin: 2px;
+    }
 }
