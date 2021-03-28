@@ -551,7 +551,7 @@ a.btn-main:hover {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.75);
-    visibility: visible;
+    visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -566,7 +566,7 @@ a.btn-main:hover {
 }
 
 #win span{
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 300;
     letter-spacing: 1px;
 }
