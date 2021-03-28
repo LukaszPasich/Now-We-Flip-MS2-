@@ -511,6 +511,7 @@ a.btn-main:hover {
     opacity: 0.2;
 }
 
+/* Score */
 
 .score {
     position: absolute;
@@ -539,4 +540,33 @@ a.btn-main:hover {
     padding: 0px;
     margin: 0px;
     line-height: 2.75rem;
+}
+
+/* Win message */
+
+#win-message {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#win {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#win span{
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 1px;
 }

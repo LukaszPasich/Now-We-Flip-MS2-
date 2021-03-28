@@ -135,11 +135,26 @@
         <!-- PLAY AREA ends here-->
 
     </div>
-    <script src="assets/js/script.js"></script>
+
+    <!-- Absolute position elements activated or updated by JavaScript   -->
+    
+    <!-- Points -->
     <div class="score">
         <p class="points">POINTS:</p>
         <p id="result"></p>
     </div>
+
+    <!-- Winning / Losing message -->
+    <div id="win-message">
+        <p id="win">You win! <br>
+            <span>You got <span id="points-amount"></span> points</span> <br>
+            <a href="play.html" class="margin-top-twentyfive margin-bottom-fifty btn-main bgrd-red">Play</a>
+            <a href="index.html" class="margin-top-twentyfive margin-bottom-fifty btn-main bgrd-vdarkgreen">Menu</a>
+        </p>
+        <div class="break"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

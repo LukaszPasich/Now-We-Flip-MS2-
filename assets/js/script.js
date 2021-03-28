@@ -337,6 +337,9 @@ function checkForWin() {
     if (lostRedRock + lostRedPaper === 6 ||
         lostRedRock + lostRedScissors === 6 ||
         lostRedPaper + lostRedScissors === 6) {
+        document.getElementById('win-message').style.visibility='visible';
+        document.getElementById('points-amount').innerHTML = pointsDisplayed;
+            console.log(pointsDisplayed);
             console.log('You won');
     } else if
         (lostGreenRock + lostGreenPaper === 6 ||
