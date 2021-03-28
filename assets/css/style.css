@@ -524,6 +524,22 @@ a.btn-main:hover {
     .menu-absolute {
         right: 30px;
     }
+
+    .score {
+        left: 25px;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .points {
+        font-size: .5rem;
+        margin-top: 10px;
+    }
+
+    #result {
+        font-size: 1.375rem;
+        line-height: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
