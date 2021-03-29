@@ -1,4 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = function() {
+
+
+    // ----------------- Shuffle Cards -----------------
+
+    /* =======================================================================================================
+         
+                                                CREDIT CODE
+    The array containing cards concept taken from this youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
+
+    ======================================================================================================== */
 
 const cardArray = [
     // green cards
@@ -115,15 +125,20 @@ const cardArray = [
 
     // ----------------- Shuffle Cards -----------------
 
+    /* =======================================================================================================
+         
+                                                CREDIT CODE
+        Shuffle Cards taken from youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
+
+    ======================================================================================================== */
+
     cardArray.sort(() => 0.5 - Math.random());
 
     // ----------------- Variables -----------------
 
-let grid = document.querySelector('.grid');
-let result = document.getElementById('result');
-let lostCards = document.querySelectorAll("div.player-panel-background > div");
-
-console.log(lostCards);
+const grid = document.querySelector('.grid');
+const result = document.getElementById('result');
+const lostCards = document.querySelectorAll("div.player-panel-background > div");
 
 // record selected cards
 let cardsSelectedName =[];
@@ -153,15 +168,42 @@ let pointsDisplayed = points.toString();
 result.textContent = pointsDisplayed;
 
 
+/*
+
+    // ----------------- Card Click Throttling -----------------
+
+const throttle = (fn, delay) => {
+  let last = 0;
+  return () => {
+    const now = new Date().getTime();
+    if(now - last < delay) {
+      return;
+    }
+    last = now;
+    return fn();
+  }
+};
+
+*/
+
+
     // ----------------- Display Cards (plug event listeners, display cards) -----------------
+
+    /* =======================================================================================================
+         
+                                                CREDIT CODE
+        Most of Shuffle Cards code found in youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
+
+    ======================================================================================================== */
 
 function displayCards() {
     for (let i = 0; i < cardArray.length; i++) {
-        var card = document.createElement('img');
+        const card = document.createElement('img');
         card.setAttribute('src', 'assets/images/card-back.png');
         card.setAttribute('data-id', i);
         card.classList.add('js-card');
-        card.addEventListener('click', selectCard);
+        card.addEventListener('click', selectCard); // - working fine, but without throttling
+        // card.addEventListener('click', throttle(selectCard, 2000));
         grid.appendChild(card);
     }
 };
@@ -177,16 +219,21 @@ function displayPoints() {
 
     // ----------------- Select Cards -----------------
 
+    /* =======================================================================================================
+         
+                                                CREDIT CODE
+        Select Cards code taken from youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
+
+    ======================================================================================================== */
+
 function selectCard() {
-    var cardId = this.getAttribute('data-id');
+    const cardId = this.getAttribute('data-id');
     cardsSelectedName.push(cardArray[cardId].name);
     cardsSelectedColour.push(cardArray[cardId].colour);
     cardsSelectedId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
         if (cardsSelectedName.length === 2) {
         setTimeout(compareCards, 1750);
-
-        // need to add removeEventListener here
     }
 };
 
@@ -210,13 +257,6 @@ function compareCards() {
         firstCardId = cardsSelectedId[0];
         secondCardId = cardsSelectedId[1];
     }
-
-    console.log(firstCardColour);
-    console.log(firstCardName);
-    console.log(firstCardId);
-    console.log(secondCardColour);
-    console.log(secondCardName);
-    console.log(secondCardId);
 
     // comparing cards - draw
     if (firstCardColour[0] === secondCardColour[0] ||
@@ -349,8 +389,6 @@ function checkForWin() {
         }
 };
 
-
 displayCards();
 
-});
-
+};
