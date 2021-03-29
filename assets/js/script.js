@@ -233,11 +233,13 @@ function compareCards() {
         firstCardName === 'paper' && secondCardName === 'rock') {
             if (firstCardName === 'paper') {
                 cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png');
+                cards[secondCardId].removeEventListener('click', selectCard);
                 storeLostRock(firstCardColour);
             } else {
                 cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png');
+                cards[firstCardId].removeEventListener('click', selectCard);
                 storeLostRock(secondCardColour); 
             }
 
@@ -246,11 +248,13 @@ function compareCards() {
         firstCardName === 'scissors' && secondCardName === 'rock') {
             if (firstCardName === 'rock') {
                 cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png');
+                cards[secondCardId].removeEventListener('click', selectCard);
                 storeLostScissors(firstCardColour);
             } else {
                 cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png');
+                cards[firstCardId].removeEventListener('click', selectCard);
                 storeLostScissors(secondCardColour);
             }
     // comparing cards - scissors beat paper
@@ -258,19 +262,16 @@ function compareCards() {
         firstCardName === 'paper' && secondCardName === 'scissors') {
         if (firstCardName === 'scissors') {
                 cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                cards[secondCardId].setAttribute('src', 'assets/images/card-empty.png');
+                cards[secondCardId].removeEventListener('click', selectCard);
                 storeLostPaper(firstCardColour);
             } else {
                 cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
-                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png'); // perhaps also switch off Event listener
+                cards[firstCardId].setAttribute('src', 'assets/images/card-empty.png');
+                cards[firstCardId].removeEventListener('click', selectCard);
                 storeLostPaper(secondCardColour);
             }
-    } else {
-    // remove consolelog error when sure that all conditions work
-    // remove eventListeners from lost cards
-    console.log('error');
     }
-
     cardsSelectedName =[];
     cardsSelectedColour = [];
     cardsSelectedId = [];
