@@ -230,32 +230,38 @@ function selectCard() {
     cardsSelectedColour.push(cardArray[cardId].colour);
     cardsSelectedId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
+        while (cardsSelectedId[0] === cardsSelectedId[1]) {   // HEY NISHANT, THIS IS THE CODE I ADDED. cardsSelectedId Array stores cards indexes ...
+            cardsSelectedId.shift();            // so whenever 2 same indexes get into array, I removed one - cancelling that click ...
+            cardsSelectedColour.shift();       // also had to remove from cardsSelectedColours, cause 2x click pushed same colour twice, making it a draw
+            cardsSelectedName.shift();        // also had to remove from cardsSelectedName as that array was taking values and 2 values in ...
+        };                                      // triggered compareCards function - see lines below
         if (cardsSelectedName.length === 2) {
-        document.getElementById('freeze-flip').style.visibility='visible';
+        document.getElementById('freeze-flip').style.visibility='visible';  // this is also new - prevents >2 cards being flipped within those 1750ms
         setTimeout(compareCards, 1750);
-    }
+        };
 
     console.log(cardsSelectedId);
+    console.log(cardsSelectedName);
+
 };
 
 // ----------------- Compare Cards -----------------
 
 function compareCards() {
     document.getElementById('freeze-flip').style.visibility='hidden';
-    let cards = document.querySelectorAll("div.grid > img");
-    console.log(cards);
+    const cards = document.querySelectorAll("div.grid > img");
 
-    for (var i = 0; i < cardsSelectedName.length; i++) {
+    for (let i = 0; i < cardsSelectedName.length; i++) {
         firstCardName = cardsSelectedName[0];
         secondCardName = cardsSelectedName[1];
     }
 
-    for (var i = 0; i < cardsSelectedColour.length; i++) {
+    for (let i = 0; i < cardsSelectedColour.length; i++) {
         firstCardColour = cardsSelectedColour[0];
         secondCardColour = cardsSelectedColour[1];
     }
 
-    for (var i = 0; i < cardsSelectedId.length; i++) {
+    for (let i = 0; i < cardsSelectedId.length; i++) {
         firstCardId = cardsSelectedId[0];
         secondCardId = cardsSelectedId[1];
     }
@@ -325,14 +331,12 @@ function compareCards() {
 function storeLostRock(rock) {
     if (rock === 'green') {
         lostRedRock++  // add lost card
-        console.log(lostRedRock);
-        lostCards[8 + lostRedRock].classList.add('transparent');
+        lostCards[8 + lostRedRock].classList.add('transparent');  // fade out red rock icon
         points += 3
         displayPoints();
     } else {
         lostGreenRock++  // add lost card
-        console.log(lostGreenRock);
-        lostCards[lostGreenRock - 1].classList.add('transparent');
+        lostCards[lostGreenRock - 1].classList.add('transparent');  // fade out green rock icon
         points -= 2
         displayPoints();
     }
@@ -342,15 +346,12 @@ function storeLostRock(rock) {
 function storeLostScissors(scissors) {
     if (scissors === 'green') {
         lostRedScissors++  // add lost card
-        console.log(lostRedScissors);
-        lostCards[14 + lostRedScissors].classList.add('transparent');
+        lostCards[14 + lostRedScissors].classList.add('transparent');  // fade out red scissors icon
         points += 3
         displayPoints();
-
     } else {
         lostGreenScissors++  // add lost card
-        console.log(lostGreenScissors);
-        lostCards[5 + lostGreenScissors].classList.add('transparent');
+        lostCards[5 + lostGreenScissors].classList.add('transparent');  // fade out green scissors icon
         points -= 2
         displayPoints();
     }
@@ -360,14 +361,12 @@ function storeLostScissors(scissors) {
 function storeLostPaper(paper) {
     if (paper === 'green') {
         lostRedPaper++  // add lost card
-        console.log(lostRedPaper);
-        lostCards[11 + lostRedPaper].classList.add('transparent');
+        lostCards[11 + lostRedPaper].classList.add('transparent');  // fade out red paper icon
         points += 3
         displayPoints();
     } else {
         lostGreenPaper++   // add lost card
-        console.log(lostGreenPaper);
-        lostCards[2 + lostGreenPaper].classList.add('transparent');
+        lostCards[2 + lostGreenPaper].classList.add('transparent');  // fade out green paper icon
         points -= 2
         displayPoints();
     }
