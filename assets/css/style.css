@@ -419,6 +419,16 @@ a.btn-main:hover {
     letter-spacing: 1px;
 }
 
+#freeze-flip {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0);
+    visibility: hidden;
+}
+
 /* -------------------- 5. Media Querries -------------------- */
 
 @media screen and (max-width: 1199px) {

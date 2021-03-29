@@ -168,7 +168,6 @@ let pointsDisplayed = points.toString();
 result.textContent = pointsDisplayed;
 
 
-/*
 
     // ----------------- Card Click Throttling -----------------
 
@@ -184,7 +183,6 @@ const throttle = (fn, delay) => {
   }
 };
 
-*/
 
 
     // ----------------- Display Cards (plug event listeners, display cards) -----------------
@@ -233,13 +231,17 @@ function selectCard() {
     cardsSelectedId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
         if (cardsSelectedName.length === 2) {
+        document.getElementById('freeze-flip').style.visibility='visible';
         setTimeout(compareCards, 1750);
     }
+
+    console.log(cardsSelectedId);
 };
 
 // ----------------- Compare Cards -----------------
 
 function compareCards() {
+    document.getElementById('freeze-flip').style.visibility='hidden';
     let cards = document.querySelectorAll("div.grid > img");
     console.log(cards);
 
