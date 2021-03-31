@@ -41,11 +41,13 @@
         <div class="row justify-content-center margin-bottom-twentyfive">
             <div class="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 bgrd-beige howtoplay-content padding-top-fifty drop-shadow">
                 <p><span class="text-bold">Now We Flip is the "Memory" game meets the "Rock, Paper, Scissors".</span></p>
-                <p>Each player has 10 cards:</p>
+                <p>There are 20 cards in the game, 10 in green and 10 in red colour. Each of the colour sets consits of 3 different suits of 3 cards with Rock, Paper and Scissors symbols on them, and 1 card with an X symbol.  </p>
                 <img class="img-how-desktop" src="assets/images/each-player-cards-desktop.png" alt="Each player has 10 cards">
                 <img class="img-how-mobile" src="assets/images/each-player-cards-mobile.png" alt="Each player has 10 cards">
                 <p>Cards are randomly placed face-down.
-                Players take turns, flipping face-up 2 cards at the time, trying to find <span class="text-bold">matching pairs</span> and eliminating other player’s cards in a “Rock, Paper, Scissors” style match.
+                The player assumes the control of the green side and by flipping face-up 2 cards at the time, tries to find <span class="text-bold">matching pairs</span> and eliminate red cards in a “Rock, Paper, Scissors” style match.
+                <img class="img-how-desktop" src="assets/images/rps-rules-desktop.png" alt="Rock, paper, scissors battle rule">
+                <img class="img-how-mobile" src="assets/images/rps-rules-cards-mobile.png" alt="Rock, paper, scissors battle rule">
                 </p>
                 <p>The matching pair is 2 cards that meet the following conditions:</p>
                 <ol>
@@ -65,12 +67,18 @@
                     <figcaption>Examples of neutral pairs.</figcaption>
                 </figure>
                 <p>Flipping the matching card pair makes the 2 cards battle and the <span class="text-bold">winning card</span> is determined according to the “Rock, Paper, Scissors” rules (Rock beats Scissors, Scissors beat Paper, Paper beats Rock).
-                The winning card stays in the game, the <span class="text-bold">loosing card</span> is removed. In case of neutral card pair there is a draw and both cards stay in the game.
+                The winning card stays in the game, the <span class="text-bold">loosing card</span> is removed.
+                Therefore the player needs to try to remember the position of the cards, in order to flip pairs that will result in red cards being eliminated and not the green cards.
+                In case of the neutral card pair being flipped, there is a draw and both cards stay in the game.
                 </p>
-                <p>When an active player flips a matching pair of cards and their card is the loosing card - that card is still removed from the game.
-                Therefore players need to be careful on their turns, not to draw a loosing pair.
-                On their turn players can flip only 2 cards. Player’s turn does not continue after successfully finding a winning pair.
-                </p>
+
+                <p>After every 2-card flip the player receives or loses some points. The rules for adding or deducting points are as follows:</p>
+                <ul>
+                    <li>Winning pair (green card beats the red card) - <span class="text-bold">3 points added</span>. </li>
+                    <li>Loosing pair (red card beats the green card) - <span class="text-bold">2 points deducted</span>.</li>
+                    <li>Neutral pair - <span class="text-bold">1 point deducted</span> (this forces the player to actively look for winning pairs).</li>
+                </ul>
+
                 <p>The player panel helps to keep track of the cards lost by each player.</p>
                 <figure>
                     <img class="img-how-desktop" src="assets/images/player-panel-desktop.png" alt="Player panel">
@@ -82,18 +90,6 @@
                     <img class="img-how-desktop" src="assets/images/xcard-desktop.png" alt="X cards">
                     <img class="img-how-mobile" src="assets/images/xcard-mobile.png" alt="X cards">
                 </figure>
-                <p>A player’s X card gets activated once the 3rd card in one suit is lost.
-                The X card becomes then an extra (4th) card in that suit and it’s marked with a little ‘x’ beside it, to indicate that this is a <span class="text-bold">converted X card</span>.
-                The converted X card behaves like the card of the suit it has been converted to, so for ex. if it is a Rock, it defeats the Scissors and loses to Paper.
-                </p>
-                <figure>
-                    <img class="img-how-desktop" src="assets/images/red-turnsx-desktop.png" alt="Red X becomes paper">
-                    <img class="img-how-mobile" src="assets/images/red-turnsx-mobile.png" alt="Red X becomes paper">
-                    <figcaption>Example: Red lost 3 x Paper cards. Red X becomes the red Paper.</figcaption>
-                </figure>
-                <p>The purpose of the converted X card is to be a neutral card early in the game (creating accidental or deliberate draws), and when converted - to give a player,
-                    who lost their full suit of cards too early in the game, an extra opportunity to continue battling with that suit.
-                </p>
                 <p><span class="text-bold">The objective of the game is to remove 2 full suits of cards of the opponent.</span> The first player to do it <span class="text-bold">wins the game.</span></p>
                 <figure>
                     <img class="img-how-desktop" src="assets/images/green-lost-desktop.png" alt="The player panel - green lost">
@@ -107,12 +103,6 @@
         <div class="footer-bar">
         </div>
         <!-- HOW TO PLAY ends here-->
-
     </div>
-
-   
-
-    <script src="assets/js/script.js"></script>
-    
 </body>
 </html>
