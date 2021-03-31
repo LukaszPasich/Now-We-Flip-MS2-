@@ -180,7 +180,7 @@ const throttle = (fn, delay) => {
     }
     last = now;
     return fn();
-  }
+  };
 };
 
 
@@ -204,7 +204,7 @@ function displayCards() {
         // card.addEventListener('click', throttle(selectCard, 2000));
         grid.appendChild(card);
     }
-};
+}
 
 
     // ----------------- Display Points -----------------
@@ -212,7 +212,7 @@ function displayCards() {
 function displayPoints() {
     pointsDisplayed = points.toString();
     result.textContent = pointsDisplayed;
-};
+}
 
 
     // ----------------- Select Cards -----------------
@@ -230,20 +230,16 @@ function selectCard() {
     cardsSelectedColour.push(cardArray[cardId].colour);
     cardsSelectedId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
-        while (cardsSelectedId[0] === cardsSelectedId[1]) {   // HEY NISHANT, THIS IS THE CODE I ADDED. cardsSelectedId Array stores cards indexes ...
-            cardsSelectedId.shift();            // so whenever 2 same indexes get into array, I removed one - cancelling that click ...
-            cardsSelectedColour.shift();       // also had to remove from cardsSelectedColours, cause 2x click pushed same colour twice, making it a draw
-            cardsSelectedName.shift();        // also had to remove from cardsSelectedName as that array was taking values and 2 values in ...
-        };                                      // triggered compareCards function - see lines below
+        while (cardsSelectedId[0] === cardsSelectedId[1]) {
+            cardsSelectedId.shift();            
+            cardsSelectedColour.shift();
+            cardsSelectedName.shift();
+        }
         if (cardsSelectedName.length === 2) {
-        document.getElementById('freeze-flip').style.visibility='visible';  // this is also new - prevents >2 cards being flipped within those 1750ms
+        document.getElementById('freeze-flip').style.visibility='visible';
         setTimeout(compareCards, 1750);
-        };
-
-    console.log(cardsSelectedId);
-    console.log(cardsSelectedName);
-
-};
+        }
+}
 
 // ----------------- Compare Cards -----------------
 
@@ -273,7 +269,7 @@ function compareCards() {
         secondCardName[0] === 'x') {
             cards[firstCardId].setAttribute('src', 'assets/images/card-back.png');
             cards[secondCardId].setAttribute('src', 'assets/images/card-back.png');
-            points--
+            points--;
             displayPoints();
 
     // comparing cards - paper beats rock
@@ -323,55 +319,55 @@ function compareCards() {
     cardsSelectedName =[];
     cardsSelectedColour = [];
     cardsSelectedId = [];
-};
+}
 
 
 // ----------------- Count & Display Lost Cards -----------------
 
 function storeLostRock(rock) {
     if (rock === 'green') {
-        lostRedRock++  // add lost card
+        lostRedRock++;  // add lost card
         lostCards[8 + lostRedRock].classList.add('transparent');  // fade out red rock icon
-        points += 3
+        points += 3;
         displayPoints();
     } else {
-        lostGreenRock++  // add lost card
+        lostGreenRock++; // add lost card
         lostCards[lostGreenRock - 1].classList.add('transparent');  // fade out green rock icon
-        points -= 2
+        points -= 2;
         displayPoints();
     }
     checkForWin();
-};
+}
 
 function storeLostScissors(scissors) {
     if (scissors === 'green') {
-        lostRedScissors++  // add lost card
+        lostRedScissors++;  // add lost card
         lostCards[14 + lostRedScissors].classList.add('transparent');  // fade out red scissors icon
-        points += 3
+        points += 3;
         displayPoints();
     } else {
-        lostGreenScissors++  // add lost card
+        lostGreenScissors++;  // add lost card
         lostCards[5 + lostGreenScissors].classList.add('transparent');  // fade out green scissors icon
-        points -= 2
+        points -= 2;
         displayPoints();
     }
     checkForWin();
-};
+}
 
 function storeLostPaper(paper) {
     if (paper === 'green') {
-        lostRedPaper++  // add lost card
+        lostRedPaper++;  // add lost card
         lostCards[11 + lostRedPaper].classList.add('transparent');  // fade out red paper icon
-        points += 3
+        points += 3;
         displayPoints();
     } else {
-        lostGreenPaper++   // add lost card
+        lostGreenPaper++ ;  // add lost card
         lostCards[2 + lostGreenPaper].classList.add('transparent');  // fade out green paper icon
-        points -= 2
+        points -= 2;
         displayPoints();
     }
     checkForWin();
-};
+}
 
 // ----------------- Check for Winning Condition -----------------
 
@@ -388,7 +384,7 @@ function checkForWin() {
         document.getElementById('lose-message').style.visibility='visible';
         document.getElementById('points-lose').innerHTML = pointsDisplayed;
         }
-};
+}
 
 displayCards();
 
