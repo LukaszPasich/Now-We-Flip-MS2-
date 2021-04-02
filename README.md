@@ -93,11 +93,12 @@ description
 <img src="assets/images_readme/ms2-readme-ux-userflow.jpg" alt="Now We Flip - website user flow">
 
 ### Wireframes (low fidelity)
-description
+These wireframes follow the original concept, the final product has been modified couple of times and deviates slightly from the original concept.
 - [Wireframes for the game AVAILABLE HERE](https://indd.adobe.com/view/41e1dcd7-ca60-4028-b5ac-60c370c98092)
 
 ### Prototype (high fidelity)
-decription
+These prototypes follow the original concept, the final product has been modified couple of times and deviates slightly from the original concept.
+
 - [Prototype - desktop version of the game AVAILABLE HERE](https://xd.adobe.com/view/302ca869-8919-4726-a9ca-0125f59e3156-657f/)
 - [Prototype - mobile version of the game AVAILABLE HERE](https://xd.adobe.com/view/41f2cbf8-b4f8-4b1c-8561-e580ba0675ed-14a1/)
 
@@ -105,26 +106,24 @@ decription
 
 #### The Name
 
-Why _"Now We Flip"_?
-
-description
+Why _"Now We Flip"_? It's the modification of the little countdown phrase that goes before the "Rock, paper, scissors" match - "Rock, paper, scissors, now we shoot!" - players throw their hand symbols on "shoot!". In case of _Now We Flip_ game the symbols are shown by flipping the cards.
 
 #### Logo
-description
+The logo depicts three cards (unsurprisingly), representing 3 symbols - Rock, Paper and Scissors, each card also being a backdrop for one of the words of the name of the game. The animated gif version of the logo also does the little countdown phrase: "Rock, paper, scissors, now we flip!".
 
-Reference images:
-<img src="assets/images_readme/ms2-readme-ux-logoref.jpg" alt="Now We Flip website logo reference">
-
-Anaconda MAA final logo:
-<img src="assets/images_readme/ms1-readme-ux-logo.jpg" alt="Now We Flip logo">
+<img src="assets/images_readme/ms2-readme-ux-logo.gif" alt="Now We Flip logo">
 
 #### Colours
-description 
+_Now We Flip_ game is a card game after all, so the general colour theme comes from trying to emulate the classic poker table feel.
+As the game have two sets of card colours eliminating each other, I thought that the good colour to oppose the green side was red.
+The beige is just a neutral colour complementary to red and green, it features mainly as background for the rules explaining section.
+The three colours convey well the three different outcomes of the card matches: green - win, beige - neutral, red - lose.
 
 <img src="assets/images_readme/ms2-readme-ux-colours.jpg" alt="Now We Flip website colours">
 
 #### Typography
-description
+Font used is a geometric sans-serif typeface with a less formal feel - Montserrat.
+
 
 
 [Back to top](#contents)
@@ -155,7 +154,7 @@ description
 - [GitHub](https://github.com) was an IDE used for the project.
 - [GitPod](https://gitpod.io/workspaces/) was used for version control.
 - [Balsamiq](https://balsamiq.com) was used to create low fidelity wireframes.
-- [Adobe XD](https://www.adobe.com/ie/products/xd.html) was used to build the high fidelity prototype.
+- [Adobe XD](https://www.adobe.com/ie/products/xd.html) was used to build the high fidelity prototypes.
 - [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html) was used to create the logo and also create/manipulate vector illustration icons and for saving vectors in .svg format.
 - [Adobe Photoshop](https://www.adobe.com/ie/products/photoshop.html) was used to edit, crop and save images.
 - [Adobe InDesign](https://www.adobe.com/ie/products/indesign.html) was used to create some visuals for this _Readme_ file and InDesign's online publish feature was used to store some of those visuals.
