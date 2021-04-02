@@ -1,10 +1,14 @@
 # __Now We Flip__ - Interactive Memory Game 
 
-Description of the project.
+_Now We Flip_ is the _"Rock, Paper, Scissors"_ meets the _"Memory"_ game. The intention was to create an interactive game that was something more than just a "find 2 matching cards" game.
+I wanted to make slightly more complex and hopefully more interesting card matching system by adding additional outcomes for the 2 cards flipped (apart from standard two outcomes: 1 - matching; 2 - not matching) and making things more dynamic by having cards creating different types of matches with different cards.
+This was possible with throwing in a _"Rock, Paper, Scissors"_ game mechanic, where 3 different results can be rendered for each card, ex: 1 - Rock ties with Rock; 2 - Rock beats Scissors; 3 - Rock gets beaten by Paper.
+In this game the player has to memorise the positions of the cards in such a way that the own - green cards eliminate and don't get eliminated by the red cards.
+I have tested this game extensively in real life with my kids and the original mechanics of the game work quite well, but the full mechanics didn't fit the scope of this project, therefore there is a big potential for further development (explained in detail below).
 
 <img src="assets/images_readme/ms2-readme-overview.png" alt="Now We Flip - website overview">
 
-# Link to live project - [CLICK HERE](https://lukaszpasich.github.io/...) 
+# Link to live project - [CLICK HERE](https://lukaszpasich.github.io/Now-We-Flip-MS2-/index.html)
 
 #### Contents
 1. [UX](#ux)
@@ -45,18 +49,29 @@ Description of the project.
 
 ## UX
 
-### User Goals
-- user goals here
+### User Goals.
+- Pass time and have fun playing a simple, enjoyable game - an outlet for a quick procrastination moment.
+- Jog the memory with the challenge presented by the game.
+- Discover an original game mechaninc mix.
 
 ### Stakeholder Goals
-- stakeholders goals here
+- Create a game experience that will attract users to the website, keep users playing (staying on the website) and coming back to play the game (returning users).
 
 ### User Stories
 
-1. user stories here
+1. As a first time user I want the game interface to be simple and easy to navigate, I want to be able to proceed to play the game without unnecessary delays, settings or other non-play interaction with the website.
+2. As a first time user I want the rules of the game to be explained, outlining clearly all rules, scoring system and winning/losing conditions.
+3. As a user of the game I want the game to be laid out clearly, with an intuitive interaction.
+4. As a user of the game I want to be able to click on what I expect being clickable in the game and receive feedback to my actions from the game.
+5. As a user of the game I expect any unpredicted interaction to be handled or prevented so that the game can't be unexpectedly broken, thus ruining the gaming experience.
+6. As a returning user I want the game to be quick and fun enough, so that I would like to play it again and again.
+7. As a returning user I want the game to have some way of increasing game difficulty, so that the game remains challenging, interesting and makes me come back to play it again.
 
 ### Project Scope
-description
+Originally the game came to life on an actual real table with the real cards and was supposed to be a 2-player game.
+I have tested it many times and the mechanics passed my own playability test, but a lot of features have been re-evaluated during the course of development.
+
+
 
 ### Information Architecture and Interaction Design
 
