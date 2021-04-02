@@ -169,7 +169,7 @@ result.textContent = pointsDisplayed;
 
 
 
-    // ----------------- Card Click Throttling -----------------
+    /* ----------------- Card Click Throttling -----------------
 
 const throttle = (fn, delay) => {
   let last = 0;
@@ -183,6 +183,7 @@ const throttle = (fn, delay) => {
   };
 };
 
+*/
 
 
     // ----------------- Display Cards (plug event listeners, display cards) -----------------
@@ -230,13 +231,13 @@ function selectCard() {
     cardsSelectedColour.push(cardArray[cardId].colour);
     cardsSelectedId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
-        while (cardsSelectedId[0] === cardsSelectedId[1]) {
-            cardsSelectedId.shift();            
-            cardsSelectedColour.shift();
-            cardsSelectedName.shift();
+        while (cardsSelectedId[0] === cardsSelectedId[1]) {   // BUG FIX: fixes bug related to double clicking on the same card
+            cardsSelectedId.shift();            // cancel the index of the second (same) card recorded in CardsSelectedId array
+            cardsSelectedColour.shift();        // cancel the colour of the second (same) card recorded in CardsSelectedColour array
+            cardsSelectedName.shift();          // cancel the name of the second (same) card recorded in CardsSelectedName array
         }
         if (cardsSelectedName.length === 2) {
-        document.getElementById('freeze-flip').style.visibility='visible';
+        document.getElementById('freeze-flip').style.visibility='visible';  // BUG FIX: applies invisible div on screen to prevent 3rd card flipped for 1750ms
         setTimeout(compareCards, 1750);
         }
 }
@@ -372,7 +373,7 @@ function storeLostPaper(paper) {
 // ----------------- Check for Winning Condition -----------------
 
 function checkForWin() {
-    if (lostRedRock + lostRedPaper === 6 ||
+    if (lostRedRock + lostRedPaper === 6 || 
         lostRedRock + lostRedScissors === 6 ||
         lostRedPaper + lostRedScissors === 6) {
         document.getElementById('win-message').style.visibility='visible';
