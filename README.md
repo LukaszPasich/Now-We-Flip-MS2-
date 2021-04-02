@@ -71,7 +71,14 @@ I have tested this game extensively in real life with my kids and the original m
 Originally the game came to life on an actual real table with the real cards and was supposed to be a 2-player game.
 I have tested it many times and the mechanics passed my own playability test, but a lot of features have been re-evaluated during the course of development.
 
-
+- __Players vs. Player game__ - this feature has been abandoned. I decided that asking 2 players swapping mouse every 2 clicks was a poor UX.
+- __Player vs. Computer game__ - this feature has been abondened due to complexity of creating a Computer player.
+I decided that the only way I can make this game a solo game with current dev skills available is by adapting a 2-player game into a solo game.
+The player will do all the card turns trying to avoid pairs where green card could be eliminated (in the normal player vs. player mode players would actively seek to eliminate the opponent's colour).
+- __X card activated__ - this feature has also been abandoned due to complexity.
+In the original game the X card was suppose to act as a 4th card in the suit that a player loses first (ex. as soon as the three green Rocks were eliminated - as player's first full suit eliminated - the green X had become another green Rock; also explained in the [prototype](https://xd.adobe.com/view/302ca869-8919-4726-a9ca-0125f59e3156-657f/)).
+This feature worked really well in the game maechinc tests, but a combination of the looming deadline and insufficient level of dev skills moved this feature onto the 'Further Future Development' shelf.
+- __Game Sounds & Music__ - also didn't make it to the final version. I was concerned with making the game work first and left this as a bonus feature in case I had more time left, but that didn't happen in the end.
 
 ### Information Architecture and Interaction Design
 
@@ -119,9 +126,6 @@ description
 #### Typography
 description
 
-
-#### Images
-description
 
 [Back to top](#contents)
 
