@@ -16,7 +16,7 @@ I have tested this game extensively in real life with my kids and the original m
 	- [Stakeholder Goals (Strategy)](#stakeholder-goals)
 	- [User Stories (Strategy)](#user-stories)
 	- [Project Scope (Scope)](#project-scope)
-	- [Information Architecture and Interaction Design (Structure)](#information-architecture-and-interaction-design)
+	- [Information Architecture - Game Flow Chart (Structure)](#information-architecture---game-flow-chart)
 	- [Wireframes (low fidelity wireframes) (Skeleton)](#wireframes-(low-fidelity))
 	- [Prototype (high fidelity wireframes) (Skeleton)](#prototype-(high-fidelity))
 	- [Design (Surface)](#design)
@@ -71,7 +71,19 @@ I have tested this game extensively in real life with my kids and the original m
 Originally the game came to life on an actual real table with the real cards and was supposed to be a 2-player game.
 I have tested it many times and the mechanics passed my own playability test, but a lot of features have been re-evaluated during the course of development.
 
-- __Players vs. Player game__ - this feature has been abandoned. I decided that asking 2 players swapping mouse every 2 clicks was a poor UX.
+The original real life tested concept:
+
+<img src="assets/images_readme/ms2-readme-ux-features.jpg" alt="Now We Flip original concept">
+
+
+All game features have been scaled down to just:
+- __Solitaire game__ - interactive memory card game with objective of using green cards to eliminate red cards in a "Rock, paper, scissors" card match. 
+- __Score track__ - calculating and displaying points after every 2-cards flip.
+- __Lost cards track__ - keeping track of eliminated cards and displaying them by fading out corresponding icons (icons displayed on either sides of the cards, or above and below cards on mobile version of the game).
+- __How to play__ - explanation of the rules of the game.
+
+The features that had to be abandonded were:
+- __Players vs. Player game__ - I decided that asking 2 players swapping mouse every 2 clicks was a poor UX.
 - __Player vs. Computer game__ - this feature has been abondened due to complexity of creating a Computer player.
 I decided that the only way I can make this game a solo game with current dev skills available is by adapting a 2-player game into a solo game.
 The player will do all the card turns trying to avoid pairs where green card could be eliminated (in the normal player vs. player mode players would actively seek to eliminate the opponent's colour).
@@ -80,17 +92,9 @@ In the original game the X card was suppose to act as a 4th card in the suit tha
 This feature worked really well in the game maechinc tests, but a combination of the looming deadline and insufficient level of dev skills moved this feature onto the 'Further Future Development' shelf.
 - __Game Sounds & Music__ - also didn't make it to the final version. I was concerned with making the game work first and left this as a bonus feature in case I had more time left, but that didn't happen in the end.
 
-### Information Architecture and Interaction Design
+### Information Architecture - Game Flow Chart
 
-#### Site Map
-description
-
-<img src="assets/images_readme/ms2-readme-ux-sitemap.jpg" alt="Now We Flip - website site map">
-
-#### User Flow
-description
-
-<img src="assets/images_readme/ms2-readme-ux-userflow.jpg" alt="Now We Flip - website user flow">
+<img src="assets/images_readme/ms2-readme-ux-flowchart.jpg" alt="Now We Flip - website user flow">
 
 ### Wireframes (low fidelity)
 These wireframes follow the original concept, the final product has been modified couple of times and deviates slightly from the original concept.
@@ -122,7 +126,7 @@ The three colours convey well the three different outcomes of the card matches: 
 <img src="assets/images_readme/ms2-readme-ux-colours.jpg" alt="Now We Flip website colours">
 
 #### Typography
-Font used is a geometric sans-serif typeface with a less formal feel - Montserrat.
+Font used is a geometric sans-serif typeface - Montserrat. It has quite informal feel which is perfect for the game.
 
 
 
