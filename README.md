@@ -21,7 +21,12 @@ I have tested this game extensively in real life with my kids and the original m
 	- [Prototype (high fidelity wireframes) (Skeleton)](#prototype-(high-fidelity))
 	- [Design (Surface)](#design)
 2. [Features](#features)
-	- [Feature One](#feature-one)
+	- [Landing Page](#landing-page)
+    - [How to Play Page](#how-to-play-page)
+    - [The Game](#the-game)
+    - [Score track](#score-track)
+    - [Eliminated Cards Track](#eliminated-cards-track)
+    - [End of the Game Message](#end-of-the-game-message)
 	- [Features to Implement in the Future](#features-to-implement-in-the-future)
 3. [Technologies](#technologies)
 	- [Tools](#tools)
@@ -135,13 +140,54 @@ Font used is a geometric sans-serif typeface - Montserrat. It has quite informal
 ---
 
 ## Features
-### Feature One
-description
+### Landing Page
+The landing page introduces the logo, a short heading describing what the game is about and just two links unambiguously leading to 1) explanation of rules of the game, and 2) the game itself.
 
-<img src="assets/images_readme/ms2-readme-features-?desktop.png" alt="Now We Flip website ? on desktops">
+<img src="assets/images_readme/ms2-readme-features-landingpage.png" alt="Now We Flip - landing page">
 
-<img src="assets/images_readme/ms2-readme-features-?rphone.png" alt="Now We Flip website ? on phone">
-	
+
+### How to Play Page
+
+This page explains the rules of how to play the game, scoring system, and the condition for winning/ losing.
+
+<img src="assets/images_readme/ms2-readme-features-howtoplaypage.png" alt="Now We Flip - How to Play page">
+
+
+### The Game
+
+_Now We Flip_ game mechanic works as a solitaire, card-flipping memory game.
+The player flips two cards at the time trying to find the matching pairs of cards in a continuous sequence of turns.
+The cards represent rock, paper and scissors symbols in two different colours (there are also two neutral cards with an X symbol) and two-card matches are resolved according to the "Rock, Paper, Scissors" rules (rock beats scissors, scissors beat paper, paper beats rock).
+The player assumes control of the green cards and flips two cards seeking to find a pair where the green card would beat the red card.
+When two cards are of the same colour or the same symbol or any of them is a card with an X symbol, the match will render a tie and both cards get flipped face-down back again - they remain in the game.
+The winning condition is met when two full suits of RED cards have been eliminated (ex. 3x rock cards and 3x paper cards).
+The losing condition is met when two full suits of GREEN cards have been eliminated.
+
+<img src="assets/images_readme/ms2-readme-features-playpage.png" alt="Now We Flip - Play page">
+
+### Score Track
+
+This feature counts the points and displays them in the top left corner of the screen after every pair of cards is flipped.
+It also acts as a good feedback that the user gets from the game after every pair of cards is flipped.
+The point count goes as follows:
+- Winning pair counts as +3 points.
+- Neutral pair counts as -1 point.
+- Losing pair counts as -2 point.
+
+<img src="assets/images_readme/ms2-readme-features-score.jpg" alt="Now We Flip - Score track">
+
+### Eliminated Cards Track
+
+This feature keeps count of cards eliminated from the game and displays it in two columns (rows on small screens and mobiles) of icons representing all rock, paper and scissors cards remaining in the game for both colours.
+It helps player to keep track of what cards have been eliminated on both sides, can therefore also help with making some decisions and help tracking how far away from winning/ losing condition the game currently is.
+It is also a way of giving user the feedback from the game to the actions taken by the player.
+Every time a card is eliminated, the little icon representing that card gets faded out.
+
+<img src="assets/images_readme/ms2-readme-features-cardslost.jpg" alt="Now We Flip - Tracking of lost cards">
+
+### End of the Game Message
+
+jshjksdhka
 
 ### Features to Implement in the Future
 - Definitely needed in the near future.
