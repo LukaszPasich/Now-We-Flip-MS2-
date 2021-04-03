@@ -169,21 +169,21 @@ result.textContent = pointsDisplayed;
 
 
 
-    /* ----------------- Card Click Throttling -----------------
+    // ----------------- Card Click Throttling -----------------
 
-const throttle = (fn, delay) => {
-  let last = 0;
-  return () => {
-    const now = new Date().getTime();
-    if(now - last < delay) {
-      return;
-    }
-    last = now;
-    return fn();
-  };
-};
+// const throttle = (fn, delay) => {
+//   let last = 0;
+//   return () => {
+//     const now = new Date().getTime();
+//     if(now - last < delay) {
+//       return;
+//     }
+//     last = now;
+//     return fn();
+//   };
+// };
 
-*/
+
 
 
     // ----------------- Display Cards (plug event listeners, display cards) -----------------
@@ -202,7 +202,7 @@ function displayCards() {
         card.setAttribute('data-id', i);
         card.classList.add('js-card');
         card.addEventListener('click', selectCard); // - working fine, but without throttling
-        // card.addEventListener('click', throttle(selectCard, 2000));
+        // card.addEventListener('click', throttle.bind(this, selectCard, 2000));
         grid.appendChild(card);
     }
 }
@@ -226,6 +226,7 @@ function displayPoints() {
     ======================================================================================================== */
 
 function selectCard() {
+    debugger
     const cardId = this.getAttribute('data-id');
     cardsSelectedName.push(cardArray[cardId].name);
     cardsSelectedColour.push(cardArray[cardId].colour);
