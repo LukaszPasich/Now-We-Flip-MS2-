@@ -94,7 +94,7 @@ I decided that the only way I can make this game a solo game with current dev sk
 The player will do all the card turns trying to avoid pairs where green card could be eliminated (in the normal player vs. player mode players would actively seek to eliminate the opponent's colour).
 - __X card activated__ - this feature has also been abandoned due to complexity.
 In the original game the X card was suppose to act as a 4th card in the suit that a player loses first (ex. as soon as the three green Rocks were eliminated - as player's first full suit eliminated - the green X had become another green Rock; also explained in the [prototype](https://xd.adobe.com/view/302ca869-8919-4726-a9ca-0125f59e3156-657f/)).
-This feature worked really well in the game maechinc tests, but a combination of the looming deadline and insufficient level of dev skills moved this feature onto the 'Further Future Development' shelf.
+This feature worked really well in the game mechanic tests, but a combination of the looming deadline and insufficient level of dev skills moved this feature onto the 'Further Future Development' shelf.
 - __Game Sounds & Music__ - also didn't make it to the final version. I was concerned with making the game work first and left this as a bonus feature in case I had more time left, but that didn't happen in the end.
 
 ### Information Architecture - Game Flow Chart
@@ -187,13 +187,23 @@ Every time a card is eliminated, the little icon representing that card gets fad
 
 ### End of the Game Message
 
-jshjksdhka
+A "Well Done!" message appears after winning condition is met, with the final score displayed and an option to play again or return to the main menu.
+
+<img src="assets/images_readme/ms2-readme-features-win.png" alt="Now We Flip - Tracking of lost cards">
+
+Similarly there is a lose message after losing condition is met.
+
+<img src="assets/images_readme/ms2-readme-features-lose.png" alt="Now We Flip - Tracking of lost cards">
 
 ### Features to Implement in the Future
-- Definitely needed in the near future.
-	- description
-- Potentially something to look at in the future.
-	- description
+- __Player vs. Computer game__ - creating a computer player that would be in control of the red cards.
+Have few levels of difficulty from easy computer that would do random card flips to difficult one remembering cards already uncovered.
+
+- __X card activated__ - having the X card activated as the 4th card in the suit that a player loses first (ex. as soon as the three green Rocks would have been eliminated - as player's first full suit eliminated - the green X would have become another green Rock).
+In game tests with real cards this proved to be an interesting, a chance-to-come-back and also a game extending mechanic.
+- __Game Sounds & Music__ - some relaxing music in the background and card flip sound effects.
+- __Players vs. Player game in an online setting__ - making this a green player vs. red player game would be more feasible if also players could match against each other online.
+- __Bringing the game online__ - making it easier for players to battle each other but not being in front of the same screen.
 
 [Back to top](#contents)
 
