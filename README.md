@@ -215,15 +215,14 @@ In game tests with real cards this proved to be an interesting, a chance-to-come
 - [GitPod](https://gitpod.io/workspaces/) was used for version control.
 - [Balsamiq](https://balsamiq.com) was used to create low fidelity wireframes.
 - [Adobe XD](https://www.adobe.com/ie/products/xd.html) was used to build the high fidelity prototypes.
-- [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html) was used to create the logo and also create/manipulate vector illustration icons and for saving vectors in .svg format.
+- [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html) was used to create the logo, cards and some images for _How to Play_ section.
 - [Adobe Photoshop](https://www.adobe.com/ie/products/photoshop.html) was used to edit, crop and save images.
-- [Adobe InDesign](https://www.adobe.com/ie/products/indesign.html) was used to create some visuals for this _Readme_ file and InDesign's online publish feature was used to store some of those visuals.
 - [Am I Responsive](http://ami.responsivedesign.is) was used to create the images of each page displayed on different screen sizes in this _Readme_ file.
 
 ### Libraries
 - [Bootstrap](https://getbootstrap.com/) grids were used in particular to create and maintain the design layout across different screen/viewport sizes and make the website responsive easily.
-- [Google Fonts](https://fonts.google.com) was used for linking _Raleway_ and _Roboto Slab_ fonts to the website.
-- [Font Awesome](https://fontawesome.com) was used for icons in the footer.
+- [Google Fonts](https://fonts.google.com) was used to link the "Montserrat" font.
+- [Font Awesome](https://fontawesome.com) was used for _play_ and _menu_ icons in the header of the _How to Play_ page and for all the icons of the _Eliminated cards track_.
 
 ### Languages
 - HTML
