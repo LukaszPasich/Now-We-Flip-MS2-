@@ -298,15 +298,76 @@ In game tests with real cards this proved to be an interesting, a chance-to-come
 ### Manual Testing
 #### Features Working Correctly (in various screen sizes) Check
 - Landing Page
-    - hh
+    - Link-button to _How to Play_ page working - YES.
+    - Link-button to _Play_ page working - YES.
 - How to Play Page
+    - Logo as a link to landing page working - YES.
+    - _Play_ link-button in the header links to _Play_ page - YES
+    - _Menu_ link-button in the header links to the landing page - YES
+    - _Play_ link-button at the bottom of the page links to _Play_ page - YES
+    - _Menu_ link-button at the bottom of the page links to the landing page - YES
 - The Game
-- Score track
-- Eliminated Cards Track
-- End of the Game Message
-- Features to Implement in the Future
-	
+    - Logo as a link to landing page working - YES
+    - _Menu_ link-button in the header links to the landing page - YES
+    - Cards on every position (1-20) can be clicked on and activated (flipped) - YES
+    - Cards are shuffled (displayed randomly) - YES
+    - Double-click (and more clicks) on one card does not trigger card comparison - YES
+    - Three cards (and more) can't be flipped in one turn - YES
+    - The order of the cards flipped does not affect the comparison outcome - YES
 
+    - On comparison of 2 green cards:
+        - both cards get flipped face-down back again - YES
+        - 1 point is deducted from the score - YES
+    - On comparison of 2 red cards:
+        - both cards get flipped face-down back again - YES
+        - 1 point is deducted from the score - YES 
+    - On comparison of 2 same symbol cards:
+        - both cards get flipped face-down back again - YES
+        - 1 point is deducted from the score - YES
+    - On comparison of 2 cards, where at least one of the cards is an X:
+        - both cards get flipped face-down back again - YES
+        - 1 point is deducted from the score - YES
+    
+    - On comparison of green rock and red scissors:
+        - green rock card gets flipped face-down back again - YES
+        - red scissors card is faded out - YES
+        - consecutive red scissors icon is faded out on the eliminted cards tracker - YES
+        - 3 points are added to the score - YES
+
+    - On comparison of green paper and red rock:
+        - green paper card gets flipped face-down back again - YES
+        - red rock card is faded out - YES
+        - consecutive red rock icon is faded out on the eliminted cards tracker - YES
+        - 3 points are added to the score - YES
+
+    - On comparison of green scissors and red paper:
+        - green scissors card gets flipped face-down back again - YES
+        - red paper card is faded out - YES
+        - consecutive red paper icon is faded out on the eliminted cards tracker - YES
+        - 3 points are added to the score - YES
+
+    - On comparison of red rock and green scissors:
+        - red rock card gets flipped face-down back again - YES
+        - green scissors card is faded out - YES
+        - consecutive green scissors icon is faded out on the eliminted cards tracker - YES
+        - 2 points are deducted from the score - YES
+
+    - On comparison of red paper and green rock:
+        - red paper card gets flipped face-down back again - YES
+        - green rock card is faded out - YES
+        - consecutive green rock icon is faded out on the eliminted cards tracker - YES
+        - 2 points are deducted from the score - YES
+
+    - On comparison of red scissors and green paper:
+        - red scissors card gets flipped face-down back again - YES
+        - green paper card is faded out - YES
+        - consecutive green paper icon is faded out on the eliminted cards tracker - YES
+        - 2 points are deducted from the score - YES
+
+    - When (any) 2 full suits of red cards get eliminated the _Winning message_ pops up - YES
+    - When (any) 2 full suits of green cards get eliminated the _Loosing message_ pops up - YES
+    - _Play Again_ button on _Winning/Loosing message_ reloads the _Play_ page - YES
+    - _Back to Menu_ button on _Winning/Loosing message_ links to the landing page - YES
 
 
 #### Various Internet Browsers Check
