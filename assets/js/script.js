@@ -67,7 +67,6 @@ const cardArray = [
     },
 
     // red cards
-
     {
         colour: 'red',
         name: 'rock',
@@ -162,31 +161,13 @@ let lostRedPaper = 0;
 let lostGreenScissors = 0;
 let lostRedScissors = 0;
 
-// store points
+// store & display points
 let points = 0;
 let pointsDisplayed = points.toString();
 result.textContent = pointsDisplayed;
 
 
-
-    // ----------------- Card Click Throttling -----------------
-
-// const throttle = (fn, delay) => {
-//   let last = 0;
-//   return () => {
-//     const now = new Date().getTime();
-//     if(now - last < delay) {
-//       return;
-//     }
-//     last = now;
-//     return fn();
-//   };
-// };
-
-
-
-
-    // ----------------- Display Cards (plug event listeners, display cards) -----------------
+    // ----------------- Display Cards (...and plug event listeners) -----------------
 
     /* =======================================================================================================
          
@@ -201,9 +182,8 @@ function displayCards() {
         card.setAttribute('src', 'assets/images/card-back.png');
         card.setAttribute('alt', 'Back of the card');  // I've added this line to pass the Accesibility Test
         card.setAttribute('data-id', i);
-        card.classList.add('js-card');
-        card.addEventListener('click', selectCard); // - working fine, but without throttling
-        // card.addEventListener('click', throttle.bind(this, selectCard, 2000));
+        card.classList.add('js-card');  // I've added this line to style the cards
+        card.addEventListener('click', selectCard);
         grid.appendChild(card);
     }
 }
@@ -222,12 +202,11 @@ function displayPoints() {
     /* =======================================================================================================
          
                                                 CREDIT CODE
-        Select Cards code taken from youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
+        Select Cards majority of the code taken from youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
 
     ======================================================================================================== */
 
 function selectCard() {
-    debugger
     const cardId = this.getAttribute('data-id');
     cardsSelectedName.push(cardArray[cardId].name);
     cardsSelectedColour.push(cardArray[cardId].colour);
@@ -243,6 +222,7 @@ function selectCard() {
         setTimeout(compareCards, 1750);
         }
 }
+
 
 // ----------------- Compare Cards -----------------
 
@@ -371,6 +351,7 @@ function storeLostPaper(paper) {
     }
     checkForWin();
 }
+
 
 // ----------------- Check for Winning Condition -----------------
 

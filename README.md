@@ -245,14 +245,15 @@ In game tests with real cards this proved to be an interesting, a chance-to-come
 	- CSS validation result [HERE](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flukaszpasich.github.io%2FNow-We-Flip-MS2-%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - Errors: 0
 
 - [JSHint](https://jshint.com/) was used for JavaScript validation (New JavaScript features (ES6) were selected in configuration):
-    - JavaScript validation result [HERE]() - Errors: 0
+    - JavaScript validation - Errors: 0
+
+<img src="assets/images_readme/ms2-readme-test-jshint.png" alt="Now We Flip - Tracking of lost cards">
 
 - [Web Accessibility](https://www.webaccessibility.com) was used to validate website's accessibility:
 	- _Landing page_ accessibility test result [HERE](https://www.webaccessibility.com/results/?url=https%3A%2F%2Flukaszpasich.github.io%2FNow-We-Flip-MS2-%2Findex.html) - Violations: 0, Compliance score: 92%
     - _How to Play page_ accessibility test result [HERE](https://www.webaccessibility.com/results/?url=https%3A%2F%2Flukaszpasich.github.io%2FNow-We-Flip-MS2-%2Fhowplay.html) - Violations: 0, Compliance score: 92%
-    - _Play page_ accessibility test result [HERE](https://www.webaccessibility.com/results/...) - Violations: 0, Compliance score: 100%
+    - _Play page_ accessibility test result [HERE](https://www.webaccessibility.com/results/?url=https%3A%2F%2Flukaszpasich.github.io%2FNow-We-Flip-MS2-%2Fplay.html) - Violations: 0, Compliance score: 92%
 	
-
 - [Google Mobile Friendly Test](https://search.google.com/test/mobile-friendly) was used to test responsiveness of the website:
 	- _Landing page_ responsiveness test result [HERE](https://search.google.com/test/mobile-friendly?id=8XoP7to8O-pbY47_KNvx0g) - Mobile friendly
     - _How to Play page_ responsiveness test result [HERE](https://search.google.com/test/mobile-friendly?id=dIpQYl5bCfoR68sNtZPsCA) - Mobile friendly
@@ -262,8 +263,30 @@ In game tests with real cards this proved to be an interesting, a chance-to-come
 ### UX Testing
 #### User Stories Testing
 
-1. As a user of the app I want ...
-    - description
+1. As a first time user I want the game interface to be simple and easy to navigate, I want to be able to proceed to play the game without unnecessary delays, settings or other non-play interaction with the website.
+    - The whole game has just 3 sections: landing page, game instructions and the game itself.
+    - Navigation is simple with large, easy to identify buttons linking the three sections.
+    - The logo always links back to the landing page.
+    - The game is ready to be played once the user hits the _Play_ button. 
+
+2. As a first time user I want the rules of the game to be explained, outlining clearly all rules, scoring system and winning/losing conditions.
+    - There is a _How to Play_ section explaining the rules of the game with examples.
+    - For users who are not familiar with the "Rock, Paper, Scissors" game, there is a link to external page explaining those rules in detail.
+
+3. As a user of the game I want the game to be laid out clearly, with an intuitive interaction.
+    - The layout of the game is simple and predictable, with cards taking the centre of the layout and points tracker in the top left corner.
+    - The cards lost tracker is not an expected feature, but once the user learns about it's purpose in _How to Play_ section, the layout makes sense.
+
+4. As a user of the game I want to be able to click on what I expect being clickable in the game and receive feedback to my actions from the game.
+    - All buttons linking between different sections of the game have hover effects.
+    - The game is quite intuitive with only large cards to activate on mouse click.
+
+5. As a user of the game I expect any unpredicted interaction to be handled or prevented so that the game can't be unexpectedly broken, thus ruining the gaming experience.
+    - It is not possible to select more than 2 cards in one turn.
+    - The points
+
+6. As a returning user I want the game to be quick and fun enough, so that I would like to play it again and again.
+7. As a returning user I want the game to have some way of increasing game difficulty, so that the game remains challenging, interesting and makes me come back to play it again.
 
 
 ### Manual Testing
