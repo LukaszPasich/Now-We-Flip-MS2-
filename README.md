@@ -237,15 +237,15 @@ In game tests with real cards this proved to be an interesting, a chance-to-come
 
 ### Automated Testing
 - [W3C Markup Validator](https://validator.w3.org/) was used for HTML validation:
-	- _Landing page_ validator result [HERE](https://validator.w3.org/...) - Errors: 0, Warnings: 0
+	- _Landing page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Flukaszpasich.github.io%2FNow-We-Flip-MS2-%2Findex.html) - Errors: 0, Warnings: 0
     - _How to Play page_ validator result [HERE](https://validator.w3.org/...) - Errors: 0, Warnings: 0
-    - _Play page_ validator result [HERE](https://validator.w3.org/...) - Errors: 0, Warnings: 0
+    - _Play page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Flukaszpasich.github.io%2FNow-We-Flip-MS2-%2Fplay.html) - Errors: 0, Warnings: 0
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used for CSS validation:
-	- CSS Validation by URI input result [HERE](https://jigsaw.w3.org/css-validator/...) - Errors: 0
-	- CSS validation by direct input - Errors: 0
-	
-    <img src="assets/images_readme/ms2-readme-testing-cssvalidation.png" alt="Now We Flip website testing - CSS validator">
+	- CSS validation by URI input result [HERE](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flukaszpasich.github.io%2FNow-We-Flip-MS2-%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - Errors: 0
+
+- [JSHint](https://jshint.com/) was used for JavaScript validation (New JavaScript features (ES6) were selected in configuration):
+    - JavaScript validation result [HERE]() - Errors: 0
 
 - [Web Accessibility](https://www.webaccessibility.com) was used to validate website's accessibility:
 	- _Landing page_ accessibility test result [HERE](https://www.webaccessibility.com/results/...) - Violations: 0, Compliance score: 100%
