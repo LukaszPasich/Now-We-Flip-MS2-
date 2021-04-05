@@ -282,18 +282,32 @@ In game tests with real cards this proved to be an interesting, a chance-to-come
     - The game is quite intuitive with only large cards to activate on mouse click.
 
 5. As a user of the game I expect any unpredicted interaction to be handled or prevented so that the game can't be unexpectedly broken, thus ruining the gaming experience.
-    - It is not possible to select more than 2 cards in one turn.
-    - The points
+    - The possibility of selecting more than 2 cards in one turn has been prevented.
+    - Double clicking on the same card and registering it as 2 different cards has been prevented.
+    - The score tracking has worked fine in multiple manual tests.
+    - The eliminated cards tracking has worked fine in multiple manual tests.
+    - The winning / losing condition has worked fine in multiple manual tests.
+    - The cards compare has worked fine in multiple manual tests.
 
 6. As a returning user I want the game to be quick and fun enough, so that I would like to play it again and again.
+    - A single game takes under 1 minute.
+    - The game features an interesting "Rock, Paper, Scissors" based card comparison mechanic, which makes the game a little bit more than just a memory card game, introducing an element of a battle against an opponent.
 7. As a returning user I want the game to have some way of increasing game difficulty, so that the game remains challenging, interesting and makes me come back to play it again.
-
+    - There isn't a lot to offer to scale up the difficulty level, but users can always return to try to beat their score. With some luck and good memory the maximum score a player can get is 24 points.
 
 ### Manual Testing
-#### Elements and Links (in various screen sizes) Working Correctly Check
-- Feature One
-	- test description - YES
+#### Features Working Correctly (in various screen sizes) Check
+- Landing Page
+    - hh
+- How to Play Page
+- The Game
+- Score track
+- Eliminated Cards Track
+- End of the Game Message
+- Features to Implement in the Future
 	
+
+
 
 #### Various Internet Browsers Check
 
