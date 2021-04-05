@@ -315,7 +315,7 @@ a.btn-main:hover {
 }
 
 .card {
-    width: 100%;
+    width: auto;
     height: auto;
     margin: 8px 0px;
     box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
@@ -353,7 +353,7 @@ a.btn-main:hover {
     display: flex;
     flex-wrap: wrap;
     height: auto;
-    width: 100%;
+    width: auto;
 }
 
 .js-card {
