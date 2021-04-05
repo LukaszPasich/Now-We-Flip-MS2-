@@ -375,24 +375,28 @@ In game tests with real cards this proved to be an interesting, a chance-to-come
 Website has been tested on the following Internet Browsers:
 
 - Google Chrome - no issues detected
-- Safari - no issues detected
+- Safari - small issues with the card sizes on different screen sizes
 - Mozilla Firefox - no issues detected
 - Microsoft Edge - no issues detected
 	
 #### Various Devices Check
 
-Website has been checked on Desktop, Laptop and iPhone6. No issues specific to devices were discovered.
+Game has been checked on Desktop, Laptop, iPhone5 and iPhone6.
+No issues specific to devices were discovered.
 	
 ### Bugs
 
 #### Bugs Fixed
-1.	- PROBLEM: description...
+1.	- PROBLEM: Couldn't compare cards which values were pushed into arrays.
+
+        I've spent some time trying to figure out why I couldn't compare 2 cards which name and colour were pushed into an array 
+
 	- SOLUTION: description...
 
 <img src="assets/images_readme/ms2-readme-testing-bugfix1.png" alt="Now We Flip website - bugs fixed">
 
 #### Bugs not Fixed
-1.	- PROBLEM: description...
+1.	- PROBLEM: descri
 	- SOLUTION: description...
 
 img src="assets/images_readme/ms2-readme-testing-bugnotfix1.png" alt="Now We Flip website - bugs not fixed">
