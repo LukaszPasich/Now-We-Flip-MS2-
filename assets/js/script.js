@@ -199,6 +199,7 @@ function displayCards() {
     for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img');
         card.setAttribute('src', 'assets/images/card-back.png');
+        card.setAttribute('alt', 'Back of the card');  // I've added this line to pass the Accesibility Test
         card.setAttribute('data-id', i);
         card.classList.add('js-card');
         card.addEventListener('click', selectCard); // - working fine, but without throttling
