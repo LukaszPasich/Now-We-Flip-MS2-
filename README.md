@@ -375,7 +375,7 @@ In game tests with real cards this proved to be an interesting, a chance-to-come
 Website has been tested on the following Internet Browsers:
 
 - Google Chrome - no issues detected
-- Safari - small issues with the card sizes on different screen sizes
+- Safari - no issues detected
 - Mozilla Firefox - no issues detected
 - Microsoft Edge - no issues detected
 	
@@ -506,20 +506,33 @@ No issues specific to devices were discovered.
 
 5.	- PROBLEM:
 
-        __Responsive design not working on mobiles__.
+        __Responsive design not working properly on mobiles and in Safari web browser__.
 
         The <code>flexbox</code> for the cards section in the middle of the play area did not behave as the desktop browser responsive design preview in the dev tools led me to believe it would.
         The cards became stretched vertcally - this was noticed last minute in the actual various devices tests.
 
+        In Safari, the cards were not scaling proportionally when screen size was changing.
+
 	- SOLUTION:
-        I had to apply 
         
+        This issue was extra annoying, as it came up last minute in the final tests, when I thought that everything was working properly already.
+
+        For the cards stretching vertically on mobiles I had to apply extra <code>@media</code> queries and the issue was solved.
+        It makes me think though that I can't fully trust the dev tools responsive design preview and that some other issues, that I couldn't test just by not being able to access more devices, might be still present.
+        
+        The safari problem was solved by adding <code> - webkit - </code> in the <code>display: flex;</code> CSS rule:
+        ```
+        display: -webkit- flex;
+        ```
+
+6. - NOTE:
+    The above were the major problems I had struggled with but there was actually a lot more less significant issues while developing this project, especially once I started writing JavaScript.
+    Documenting all of them would be very laborious though. I just wanted to highlight the fact that writing JavaScript was tough, with a lot of setbacks, but fortunatelly also a lot of discoveries that helped me move from "I will never be able to do it" to "I could actually do it".
+
 
 #### Bugs not Fixed
-1.	- PROBLEM: descri
-	- SOLUTION: description...
+I was able to fix all of the problems that I was aware of.
 
-<img src="assets/images_readme/ms2-readme-testing-bugfix1b.png" alt="Now We Flip website - bugs fixed 1">
 [Back to top](#contents)
 
 
