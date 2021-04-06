@@ -387,20 +387,87 @@ No issues specific to devices were discovered.
 ### Bugs
 
 #### Bugs Fixed
-1.	- PROBLEM: Couldn't compare cards which values were pushed into arrays.
+1.	- PROBLEM:
 
-        I've spent some time trying to figure out why I couldn't compare 2 cards which name and colour were pushed into an array 
+        I couldn't compare cards which values were pushed into arrays, I've spent some time trying to figure out why and I discovered this post on StackOverflow explaining that equality check doesn't work with arrays.
 
-	- SOLUTION: description...
+        [Why doesn't equality check work with arrays.](https://stackoverflow.com/questions/30820611/why-doesnt-equality-check-work-with-arrays)
 
-<img src="assets/images_readme/ms2-readme-testing-bugfix1.png" alt="Now We Flip website - bugs fixed">
+	- SOLUTION:
+    
+        I have split information about the symbols, colours and indexes of cards stored in arrays into separate arrays storing individual symbol, colour and index for first card separately and second card separately.
+        I was able to compare those values when they were in separate arrays without a problem.
+        I know the code isn't efficient but I had to stick with it otherwise I would tie my brain in knots trying to improve it at that time.
+```
+    // record selected cards
+    let cardsSelectedName =[];
+    let cardsSelectedColour = [];
+    let cardsSelectedId = [];
+
+    // split recorded card values to individual card values
+    let firstCardColour;
+    let firstCardName;
+    let firstCardId;
+
+    let secondCardColour;
+    let secondCardName;
+    let secondCardId;
+```
+
+```
+for (let i = 0; i < cardsSelectedName.length; i++) {
+        firstCardName = cardsSelectedName[0];
+        secondCardName = cardsSelectedName[1];
+    }
+
+    for (let i = 0; i < cardsSelectedColour.length; i++) {
+        firstCardColour = cardsSelectedColour[0];
+        secondCardColour = cardsSelectedColour[1];
+    }
+
+    for (let i = 0; i < cardsSelectedId.length; i++) {
+        firstCardId = cardsSelectedId[0];
+        secondCardId = cardsSelectedId[1];
+    }
+```
+
+2.	- PROBLEM:
+
+        Double (and multiple) click on one card stored values of that card as if they were different cards,
+        triggering card comparison of the same card against itself, which always rendered draw.
+        Double click had to be disabled in order for the game to work properly.
+        The image below shows 6-clicks on red paper in position index[0] being saved in the array, and the first and second values in each array are submitted for card comparison.
+        The result is red paper being compared to red paper and the conclusion - a draw.
+        
+    <img src="assets/images_readme/ms2-readme-testing-bugfix2.png" alt="Now We Flip website - bugs fixed 1">
+
+	- SOLUTION:
+    
+        My mentor introduced me to the concept of throttling and debouncing.
+        I was trying to fix the issue using the throttling function but I couldn't get it to work.
+        As far as I understand it, <code>this</code> argument was travelling to different function and loosing its context.
+        The <code>.bind</code> method didn't work to tie the original context to it. The function actually worked when I was just asking it to <code>console.log</code> a message, but didn't work with the rest of my code.
+
+    <img src="assets/images_readme/ms2-readme-testing-bugfix2b.png" alt="Now We Flip website - bugs fixed 1">
+
+    I had to think of somethithng else to work around this problem and at this stage of my JavaScript knowledge I came up with this cheap solution
+    (I understand that throttling would be a better solution and my solution wouldn't be fit for the real world, production scenario).
+    ```
+     while (cardsSelectedId[0] === cardsSelectedId[1]) {   // BUG FIX: fixes bug related to double clicking on the same card
+            cardsSelectedId.shift();            // cancel the index of the second (same) card recorded in CardsSelectedId array
+            cardsSelectedColour.shift();        // cancel the colour of the second (same) card recorded in CardsSelectedColour array
+            cardsSelectedName.shift();          // cancel the name of the second (same) card recorded in CardsSelectedName array
+        }
+    ```
+    So in this snippet I am checking if the index of the first clicked card is the same as the index of the second clicked card,
+    and as long as it is, I am removing that index from the array and also the newly logged colour and name of the card in respective arrays.
+    As a result multiple clicks on one card log only that card. Each click however is still processed, the throttling workaround would be a better solution by disabling the click altogether.
 
 #### Bugs not Fixed
 1.	- PROBLEM: descri
 	- SOLUTION: description...
 
-img src="assets/images_readme/ms2-readme-testing-bugnotfix1.png" alt="Now We Flip website - bugs not fixed">
-
+<img src="assets/images_readme/ms2-readme-testing-bugfix1b.png" alt="Now We Flip website - bugs fixed 1">
 [Back to top](#contents)
 
 
