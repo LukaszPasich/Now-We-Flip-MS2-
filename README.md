@@ -389,57 +389,13 @@ No issues specific to devices were discovered.
 #### Bugs Fixed
 1.	- PROBLEM:
 
-        I couldn't compare cards which values were pushed into arrays, I've spent some time trying to figure out why and I discovered this post on StackOverflow explaining that equality check doesn't work with arrays.
-
-        [Why doesn't equality check work with arrays.](https://stackoverflow.com/questions/30820611/why-doesnt-equality-check-work-with-arrays)
-
-	- SOLUTION:
-    
-        I have split information about the symbols, colours and indexes of cards stored in arrays into separate arrays storing individual symbol, colour and index for first card separately and second card separately.
-        I was able to compare those values when they were in separate arrays without a problem.
-        I know the code isn't efficient but I had to stick with it otherwise I would tie my brain in knots trying to improve it at that time.
-```
-    // record selected cards
-    let cardsSelectedName =[];
-    let cardsSelectedColour = [];
-    let cardsSelectedId = [];
-
-    // split recorded card values to individual card values
-    let firstCardColour;
-    let firstCardName;
-    let firstCardId;
-
-    let secondCardColour;
-    let secondCardName;
-    let secondCardId;
-```
-
-```
-for (let i = 0; i < cardsSelectedName.length; i++) {
-        firstCardName = cardsSelectedName[0];
-        secondCardName = cardsSelectedName[1];
-    }
-
-    for (let i = 0; i < cardsSelectedColour.length; i++) {
-        firstCardColour = cardsSelectedColour[0];
-        secondCardColour = cardsSelectedColour[1];
-    }
-
-    for (let i = 0; i < cardsSelectedId.length; i++) {
-        firstCardId = cardsSelectedId[0];
-        secondCardId = cardsSelectedId[1];
-    }
-```
-
-2.	- PROBLEM:
-
         Double (and multiple) click on one card stored values of that card as if they were different cards,
         triggering card comparison of the same card against itself, which always rendered draw.
         Double click had to be disabled in order for the game to work properly.
         The image below shows 6-clicks on red paper in position index[0] being saved in the array, and the first and second values in each array are submitted for card comparison.
         The result is red paper being compared to red paper and the conclusion - a draw.
         
-    <img src="assets/images_readme/ms2-readme-testing-bugfix2.png" alt="Now We Flip website - bugs fixed 1">
+        <img src="assets/images_readme/ms2-readme-testing-bugfix2.png" alt="Now We Flip website - bugs fixed 1">
 
 	- SOLUTION:
     
@@ -448,20 +404,116 @@ for (let i = 0; i < cardsSelectedName.length; i++) {
         As far as I understand it, <code>this</code> argument was travelling to different function and loosing its context.
         The <code>.bind</code> method didn't work to tie the original context to it. The function actually worked when I was just asking it to <code>console.log</code> a message, but didn't work with the rest of my code.
 
-    <img src="assets/images_readme/ms2-readme-testing-bugfix2b.png" alt="Now We Flip website - bugs fixed 1">
+        <img src="assets/images_readme/ms2-readme-testing-bugfix2b.png" alt="Now We Flip website - bugs fixed 1">
 
-    I had to think of somethithng else to work around this problem and at this stage of my JavaScript knowledge I came up with this cheap solution
-    (I understand that throttling would be a better solution and my solution wouldn't be fit for the real world, production scenario).
-    ```
-     while (cardsSelectedId[0] === cardsSelectedId[1]) {   // BUG FIX: fixes bug related to double clicking on the same card
-            cardsSelectedId.shift();            // cancel the index of the second (same) card recorded in CardsSelectedId array
-            cardsSelectedColour.shift();        // cancel the colour of the second (same) card recorded in CardsSelectedColour array
-            cardsSelectedName.shift();          // cancel the name of the second (same) card recorded in CardsSelectedName array
+        I had to think of somethithng else to work around this problem and at this stage of my JavaScript knowledge I came up with this cheap solution
+        (I understand that throttling would be a better solution and my solution wouldn't be fit for the real world, production scenario).
+        ```
+        while (cardsSelectedId[0] === cardsSelectedId[1]) {   // BUG FIX: fixes bug related to double clicking on the same card
+                cardsSelectedId.shift();            // cancel the index of the second (same) card recorded in CardsSelectedId array
+                cardsSelectedColour.shift();        // cancel the colour of the second (same) card recorded in CardsSelectedColour array
+                cardsSelectedName.shift();          // cancel the name of the second (same) card recorded in CardsSelectedName array
+            }
+        ```
+        So in this snippet I am checking if the index of the first clicked card is the same as the index of the second clicked card,
+        and as long as it is, I am removing that index from the array and also the newly logged colour and name of the card in respective arrays.
+        As a result multiple clicks on one card log only that card. Each click however is still processed, the throttling workaround would be a better solution by disabling the click altogether.
+
+
+2.	- PROBLEM:
+
+        __More than 2 cards selected in one turn.__
+
+        After selecting the second card a <code>setTimeout</code> function let the card stay flipped face-up for 1750 miliseconds for the user to absorb the information (what has been just flipped).
+        In that time unfortunately the user could accidently flip more cards.
+        The values submitted for comparison were the first and second card, but everything flipped after second card stayed flipped face-up for the remainder of the game, effectively breaking the game.
+
+        <img src="assets/images_readme/ms2-readme-testing-bugfix3a.png" alt="Now We Flip website - bugs fixed 1">
+
+	- SOLUTION:
+    
+        This problem was difficult to solve, especially after I saw that I couldn't get the throttling function to work in the first place.
+        The solution I came up with was even cheaper than the solution to the previous problem and I also understand this is not a real world production standard workaround.
+        However it worked well.
+    
+        ```
+        JS
+
+        if (cardsSelectedName.length === 2) {
+            document.getElementById('freeze-flip').style.visibility='visible';  // BUG FIX: applies invisible div on screen to prevent 3rd card flipped for 1750ms
+            setTimeout(compareCards, 1750);
         }
-    ```
-    So in this snippet I am checking if the index of the first clicked card is the same as the index of the second clicked card,
-    and as long as it is, I am removing that index from the array and also the newly logged colour and name of the card in respective arrays.
-    As a result multiple clicks on one card log only that card. Each click however is still processed, the throttling workaround would be a better solution by disabling the click altogether.
+        ```
+        ```
+        CSS
+
+        #freeze-flip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0);
+            visibility: hidden;
+        }
+        ```
+        
+        Right after the second card has been selected I placed for 1750 miliseconds full screen transparent div on top of everything, preventing anything to be clicked until the card comparison function has been executed.
+            
+
+3.	- PROBLEM:
+
+        __"Zombie cards"__
+
+        Eliminated cards have been ready to be reactivated again as the event listeners were active on all 20 spaces at all times.
+
+	- SOLUTION:
+    
+        This one turned out to be easy to solve with <code>.removeEventListener</code> method on every eliminated card.
+
+
+4.	- PROBLEM:
+
+        __Cards shuffle didn't work in Mozilla Firefox__.
+
+        In my tests of different browsers I discovered that browsers Google Chrome, Safari and Microsoft Edge displayed my cards nicely randomised, but Mozilla Firefox had only about 2 or 3 cards shuffled.
+        The shuffle function that I've used was taken from one of the tutorials I found on internet:
+        ```
+        cardArray.sort(() => 0.5 - Math.random());
+        ```
+        As far as I understood this function it was a 50/50 chance swap around of 2 neighbouring indexes, so with a bit of luck the first item in the array could even travel to the last position.
+        Unfortunatelly, for some reason this function worked poorly in Mozilla Firefox.
+
+	- SOLUTION:
+    
+        I came back to the Fisher-Yates shuffle again.
+        I read about this when I was starting the project but it was alien speak to me at that time.
+        Couple of weeks later into the project I understood JavaScript much more, so that I was actually able to implement it without any hiccups and the issue has been solved.
+
+        ```
+        
+        // Fisher-Yates Shuffle: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+
+        function shuffle() {
+            for (let i = cardArray.length - 1; i >= 0; i--) {
+                const randomIndex = Math.floor(Math.random() * (i + 1));
+                cardArray.push(cardArray[randomIndex]);
+                cardArray.splice(randomIndex, 1);
+            }
+        displayCards(cardArray);
+        }
+        ```  
+
+5.	- PROBLEM:
+
+        __Responsive design not working on mobiles__.
+
+        The <code>flexbox</code> for the cards section in the middle of the play area did not behave as the desktop browser responsive design preview in the dev tools led me to believe it would.
+        The cards became stretched vertcally - this was noticed last minute in the actual various devices tests.
+
+	- SOLUTION:
+        I had to apply 
+        
 
 #### Bugs not Fixed
 1.	- PROBLEM: descri

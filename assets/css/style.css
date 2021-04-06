@@ -350,7 +350,7 @@ a.btn-main:hover {
 
 /* Cards */
 .grid {
-    display: flex;
+    display: -webkit- flex;
     flex-wrap: wrap;
     max-height: 100vh;
     width: auto;
