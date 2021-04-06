@@ -508,7 +508,7 @@ No issues specific to devices were discovered.
 
         __Responsive design not working properly on mobiles and in Safari web browser__.
 
-        The <code>flexbox</code> for the cards section in the middle of the play area did not behave as the desktop browser responsive design preview in the dev tools led me to believe it would.
+        The <code>flexbox</code> for the cards section in the middle of the play area did not behave as the desktop browser responsive design preview in the Google Chrome DevTools led me to believe it would.
         The cards became stretched vertcally - this was noticed last minute in the actual various devices tests.
 
         In Safari, the cards were not scaling proportionally when screen size was changing.
@@ -518,7 +518,7 @@ No issues specific to devices were discovered.
         This issue was extra annoying, as it came up last minute in the final tests, when I thought that everything was working properly already.
 
         For the cards stretching vertically on mobiles I had to apply extra <code>@media</code> queries and the issue was solved.
-        It makes me think though that I can't fully trust the dev tools responsive design preview and that some other issues, that I couldn't test just by not being able to access more devices, might be still present.
+        It makes me think though that I can't fully trust the Google Chrome DevTools responsive design preview and that some other issues, that I couldn't test just by not being able to access more devices, might be still present.
         
         The safari problem was solved by adding <code> - webkit - </code> in the <code>display: flex;</code> CSS rule:
         ```
@@ -566,7 +566,15 @@ The project was deployed to GitHub Pages using the following steps...
 
 ### Cloning
 
-Description of cloning steps.
+1. Find this project [repository](https://github.com/LukaszPasich/Now-We-Flip-MS2-) on github.
+2. Under the repository name, click "Clone or download".
+3. In the Clone with HTTPs section, copy the clone URL for the repository.
+In your local IDE open Git Bash.
+Change the current working directory to the location where you want the cloned directory to be made.
+Type git clone, and then paste the URL you copied in Step 3.
+git clone https://github.com/USERNAME/REPOSITORY
+Press Enter. Your local clone will be created.
+
 
 
 [Back to top](#contents)
