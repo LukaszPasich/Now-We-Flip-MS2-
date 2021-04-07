@@ -3,7 +3,7 @@
 _Now We Flip_ is the _"Rock, Paper, Scissors"_ meets the _"Memory"_ game. The intention was to create an interactive game that was something more than just a "find 2 matching cards" game.
 I wanted to make slightly more complex and hopefully more interesting card matching system by adding additional outcomes for the 2 cards flipped (apart from standard two outcomes: 1 - matching; 2 - not matching) and making things more dynamic by having cards creating different types of matches with different cards.
 This was possible with throwing in a _"Rock, Paper, Scissors"_ game mechanic, where 3 different results can be rendered for each card, ex: 1 - Rock ties with Rock; 2 - Rock beats Scissors; 3 - Rock gets beaten by Paper.
-In this game the player has to memorise the positions of the cards in such a way that the own - green cards eliminate and don't get eliminated by the red cards.
+In this game the player has to memorise the positions of the cards in such a way that the own, green cards, eliminate the red cards and don't get eliminated by them.
 I have tested this game extensively in real life with my kids and the original mechanics of the game work quite well, but the full mechanics didn't fit the scope of this project, therefore there is a big potential for further development (explained in detail below).
 
 <img src="assets/images_readme/ms2-readme-overview.png" alt="Now We Flip - website overview">
@@ -91,7 +91,7 @@ The features that had to be abandonded were:
 - __Players vs. Player game__ - I decided that asking 2 players swapping mouse every 2 clicks was a poor UX.
 - __Player vs. Computer game__ - this feature has been abondened due to complexity of creating a Computer player.
 I decided that the only way I can make this game a solo game with current dev skills available is by adapting a 2-player game into a solo game.
-The player will do all the card turns trying to avoid pairs where green card could be eliminated (in the normal player vs. player mode players would actively seek to eliminate the opponent's colour).
+The player will do all the card turns trying to avoid pairs where green cards could be eliminated (in the normal player vs. player mode players would actively seek to eliminate the opponent's colour).
 - __X card activated__ - this feature has also been abandoned due to complexity.
 In the original game the X card was suppose to act as a 4th card in the suit that a player loses first (ex. as soon as the three green Rocks were eliminated - as player's first full suit eliminated - the green X had become another green Rock; also explained in the [prototype](https://xd.adobe.com/view/302ca869-8919-4726-a9ca-0125f59e3156-657f/)).
 This feature worked really well in the game mechanic tests, but a combination of the looming deadline and insufficient level of dev skills moved this feature onto the 'Further Future Development' shelf.
@@ -115,7 +115,8 @@ These prototypes follow the original concept, the final product has been modifie
 
 #### The Name
 
-Why _"Now We Flip"_? It's the modification of the little countdown phrase that goes before the "Rock, paper, scissors" match - "Rock, paper, scissors, now we shoot!" - players throw their hand symbols on "shoot!". In case of _Now We Flip_ game the symbols are shown by flipping the cards.
+Why _"Now We Flip"_? It's the modification of the little countdown phrase that goes before the "Rock, paper, scissors" match - "Rock, paper, scissors, now we shoot!" - players throw their hand symbols on "shoot!".
+In case of _Now We Flip_ game, the symbols are shown by flipping the cards.
 
 #### Logo
 The logo depicts three cards (unsurprisingly), representing 3 symbols - Rock, Paper and Scissors, each card also being a backdrop for one of the words of the name of the game. The animated gif version of the logo also does the little countdown phrase: "Rock, paper, scissors, now we flip!".
@@ -159,7 +160,7 @@ _Now We Flip_ game mechanic works as a solitaire, card-flipping memory game.
 The player flips two cards at the time trying to find the matching pairs of cards in a continuous sequence of turns.
 The cards represent rock, paper and scissors symbols in two different colours (there are also two neutral cards with an X symbol) and two-card matches are resolved according to the "Rock, Paper, Scissors" rules (rock beats scissors, scissors beat paper, paper beats rock).
 The player assumes control of the green cards and flips two cards seeking to find a pair where the green card would beat the red card.
-When two cards are of the same colour or the same symbol or any of them is a card with an X symbol, the match will render a tie and both cards get flipped face-down back again - they remain in the game.
+When two cards are of the same colour or the same symbol or any of them is the card with an X symbol, the match will render a tie and both cards get flipped face-down back again - they remain in the game.
 The winning condition is met when two full suits of RED cards have been eliminated (ex. 3x rock cards and 3x paper cards).
 The losing condition is met when two full suits of GREEN cards have been eliminated.
 
