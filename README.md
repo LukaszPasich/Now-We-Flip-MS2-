@@ -590,15 +590,31 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 ## Credits
 ### Content
-The textual content was influenced by or taken from the websites:
-- [Website Name](https://www....)
+The rules of the game on _How to Play_ page were written by Lukasz Pasich.
+
 
 ### Media
 - Rock, Paper, Scissors icons - by nightwolfdezines, downloaded from [www.vecteezy.com](https://www.vecteezy.com/vector-art/690865-rock-paper-scissors-line-icons)
 - Poker table felt background - by klikk, downloaded from [www.adobestock.com](https://stock.adobe.com/ie/images/poker-table-felt/1414609)
 
 ### Code
-- Code/feature description - code found on _www...._ website [https://www....](https://www....), (style.css file lines 000-000). 
+__Note:__ After finishing HTML and CSS part of the project, the time finally came to write JavaScript.
+JavaScript code was hard to start, I didn't know where and how to begin and at one point I was certain I wasn't going to make it at all.
+That was the darkest moment for me on the course so far.
+After probably about 2 days of trying to think how to get on with starting the game I managed to progress nowhere and I moved on to watching tutorials. 
+Only then, after watching tutorials on making the memory card game I found one tutorial that could work with the HTML/CSS setup I had in place in my game.
+I started copying lines of code, being nearly convinced that I was commiting plagiarism at that time, but I couldn't come up with the start of the game by myself.
+Soon enough I realised that I was writing a lot of my own code.
+I also realised that it was probably normal practice to use parts of the code written by other people - for ex. I could never invent a card shuffling function with my current level of JS knowledge - I had to take it from somewhere.
+At that point I also started feeling much more confident about writing the code by myself.  
+This project started very slow, but at the end of it I got to understand much more of JavaScript language.
+
+Below are the credits for parts of the code that I found online, without which I wouldn't be able to move on with this game: 
+
+- The array containing cards concept taken from this youtube tutorial: [https://www.youtube.com/watch?v=tjyDOHzKN0w](https://www.youtube.com/watch?v=tjyDOHzKN0w), (script.js file, array declared in line 013).
+- Fisher-Yates Card Shuffling function: [https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle), (script.js file, function declared in line 134).
+- Most of Display Cards code found in youtube tutorial: [https://www.youtube.com/watch?v=tjyDOHzKN0w](https://www.youtube.com/watch?v=tjyDOHzKN0w), (script.js file, function declared in line 186).
+- Majority of the Select Cards code found in youtube tutorial: [https://www.youtube.com/watch?v=tjyDOHzKN0w](https://www.youtube.com/watch?v=tjyDOHzKN0w), (script.js file, function declared in line 216).
 
 ### Resources
 Websites I have accessed for solutions/ questions and extra resources:
@@ -607,8 +623,11 @@ Websites I have accessed for solutions/ questions and extra resources:
 - [www.developer.mozilla.org](https://developer.mozilla.org/en-US/)
 - [www.css.tricks.com](https://css-tricks.com)
 - [Code Institute course content](https://codeinstitute.net/)
+- [Kevin Powell youtube channel](https://www.youtube.com/user/KepowOb)
+- [Web Dev Simplified youtube channel](https://www.youtube.com/c/WebDevSimplified)
 
 ### Acknowledgements
+- Thank you to my kids Nicolas and Maia who patiently helped me with testing of the game. 
 - Thank you to my mentor __Nishant Kumar__ for his guidance, support and continuous helpful feedback throughout this project.
 - Tutor Support at Code Institute and the Slack Community for a solution to any question at any time.
 

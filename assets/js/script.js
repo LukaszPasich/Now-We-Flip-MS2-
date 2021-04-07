@@ -179,7 +179,7 @@ result.textContent = pointsDisplayed;
     /* =======================================================================================================
          
                                                 CREDIT CODE
-        Most of Shuffle Cards code found in youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
+        Most of Display Cards code found in youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
 
     ======================================================================================================== */
 
@@ -209,7 +209,7 @@ function displayPoints() {
     /* =======================================================================================================
          
                                                 CREDIT CODE
-        Select Cards majority of the code taken from youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
+        Select Cards majority of the code found on youtube tutorial: https://www.youtube.com/watch?v=tjyDOHzKN0w
 
     ======================================================================================================== */
 
