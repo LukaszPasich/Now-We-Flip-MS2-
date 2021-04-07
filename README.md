@@ -567,14 +567,19 @@ The project was deployed to GitHub Pages using the following steps...
 ### Cloning
 
 1. Find this project [repository](https://github.com/LukaszPasich/Now-We-Flip-MS2-) on github.
-2. Under the repository name, click "Clone or download".
-3. In the Clone with HTTPs section, copy the clone URL for the repository.
-In your local IDE open Git Bash.
-Change the current working directory to the location where you want the cloned directory to be made.
-Type git clone, and then paste the URL you copied in Step 3.
-git clone https://github.com/USERNAME/REPOSITORY
-Press Enter. Your local clone will be created.
+2. Under the repository name, click on "Code" button.
+3. In the Clone/ Download unfolded tab click on HTTPS (to clone with HTTPS).
+4. Click on the 'clipboard' icon to copy the URL of your project.
 
+<img src="assets/images_readme/ms2-readme-cloning-one.png" alt="Now We Flip website - cloning instructions">
+
+5. Open your IDE, open terminal.
+6. Change the current working directory to the location where you want the cloned directory.
+7. In the terminal type <code>git clone</code>, and then paste the URL you copied earlier.
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+8. Press _ENTER_ to create your local clone.
 
 
 [Back to top](#contents)
